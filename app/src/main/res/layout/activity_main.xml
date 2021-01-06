@@ -16,8 +16,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:logo="@drawable/coastercounterlogo"
-        app:showAsAction="ifRoom"/>
+
+        app:menu="@menu/navigation"
+        app:showAsAction="ifRoom" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

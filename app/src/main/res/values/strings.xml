@@ -6,4 +6,5 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="action_einstellungen">Einstellungen</string>
+    <string name="action_statistik">Statistik</string>
 </resources>
