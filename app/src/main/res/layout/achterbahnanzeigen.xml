@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="main.MainActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -16,7 +16,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-
         app:menu="@menu/navigation"
         app:showAsAction="ifRoom" />
 
@@ -40,7 +39,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/string_achterbahnanzeigen_name"
                 android:textSize="36sp"
-                android:textAlignment="center"/>
+                android:textAlignment="center"
+                android:gravity="center_horizontal" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:srcCompat="@tools:sample/avatars" />
         </LinearLayout>
     </ScrollView>
 
