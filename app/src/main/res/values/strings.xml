@@ -15,4 +15,5 @@
     <string name="action_navigation_sofortfeedback">Sofortfeedback</string>
     <string name="action_navigation_abmelden">Abmelden</string>
     <string name="string_achterbahnanzeigen_name">Achterbahnname</string>
+    <string name="string_achterbahnsuchen">Suchen</string>
 </resources>

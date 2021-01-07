@@ -3,6 +3,7 @@ package com.example.coastecounter.main;
 import android.os.Bundle;
 import android.view.Menu;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import com.example.coastecounter.R;
 import com.example.coastecounter.achterbahn.AchterbahnController;
