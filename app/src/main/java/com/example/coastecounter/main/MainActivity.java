@@ -1,10 +1,11 @@
-package com.example.coastecounter;
+package com.example.coastecounter.main;
 
 import android.content.res.Resources;
 import android.view.Menu;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
+import com.example.coastecounter.R;
 
 public class MainActivity extends AppCompatActivity {
 
