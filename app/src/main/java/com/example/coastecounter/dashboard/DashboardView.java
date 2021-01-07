@@ -6,8 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import androidx.appcompat.widget.Toolbar;
 import com.example.coastecounter.R;
+import com.example.coastecounter.main.View;
 
-public class dashboardView extends AppCompatActivity {
+public class DashboardView extends AppCompatActivity implements View {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
