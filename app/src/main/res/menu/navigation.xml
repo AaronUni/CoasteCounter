@@ -17,5 +17,9 @@
         android:icon="@android:drawable/ic_menu_preferences"
         android:title="@string/action_navigation_einstellungen"
         app:showAsAction="never" />
+    <item android:title="@string/action_navigation_sofortfeedback"
+          android:id="@+id/id_action_sofortfeedback"/>
+    <item android:id="@+id/id_action_abmelden" android:title="@string/action_navigation_abmelden"/>
+
 
 </menu>

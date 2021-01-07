@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
        /* getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);*/        //wird benötigt für den Backpfeil  https://stackoverflow.com/questions/35810229/how-to-display-and-set-click-event-on-back-arrow-on-toolbar
 
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

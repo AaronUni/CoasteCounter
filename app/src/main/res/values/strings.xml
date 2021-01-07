@@ -12,4 +12,6 @@
     <string name="string_dashboard_badges">Badges suchen</string>
     <string name="string_dashboard_achterbahn">Achterbahn anzeigen</string>
     <string name="string_navigation_angemeldet">Angemeldet als [name]</string>
+    <string name="action_navigation_sofortfeedback">Sofortfeedback</string>
+    <string name="action_navigation_abmelden">Abmelden</string>
 </resources>
