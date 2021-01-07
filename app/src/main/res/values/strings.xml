@@ -7,4 +7,8 @@
     <string name="title_notifications">Notifications</string>
     <string name="action_einstellungen">Einstellungen</string>
     <string name="action_statistik">Statistik</string>
+    <string name="string_dashboard_parkname">Parkname:</string>
+    <string name="string_dashboard_parkauswahl">Park auswählen</string>
+    <string name="string_dashboard_badges">Badges suchen</string>
+    <string name="string_dashboard_achterbahn">Achterbahn anzeigen</string>
 </resources>
