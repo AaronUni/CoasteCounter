@@ -1,14 +1,15 @@
 <resources>
     <string name="app_name">CoasterCounter</string>
     <string name="activity_main_titel">CoasterCounter</string>
-    <string name="title_activity_main2">MainActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string name="action_einstellungen">Einstellungen</string>
-    <string name="action_statistik">Statistik</string>
+    <string name="action_navigation_einstellungen">Einstellungen</string>
+    <string name="action_navigation_perstatistik">Persönliche Statistik</string>
+    <string name="action_navigation_parkstatistik">Parkstatistik</string>
     <string name="string_dashboard_parkname">Parkname:</string>
     <string name="string_dashboard_parkauswahl">Park auswählen</string>
     <string name="string_dashboard_badges">Badges suchen</string>
     <string name="string_dashboard_achterbahn">Achterbahn anzeigen</string>
+    <string name="string_navigation_angemeldet">Angemeldet als [name]</string>
 </resources>

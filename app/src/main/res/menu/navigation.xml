@@ -2,15 +2,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/id_action_einstellungen"
-        android:title="@string/action_einstellungen"
-        android:icon="@android:drawable/ic_menu_preferences"
-        app:showAsAction="never"
-        />
+
+        android:id="@+id/id_action_angemeldet"
+        android:title="@string/string_navigation_angemeldet" />
     <item
-        android:id="@+id/id_action_statistik"
-        android:title="@string/action_statistik"
-        app:showAsAction="never"
-        />
+        android:id="@+id/id_action_parkstatistik"
+        android:title="@string/action_navigation_parkstatistik"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/id_action_perstatistik"
+        android:title="@string/action_navigation_perstatistik" />
+    <item
+        android:id="@+id/id_action_einstellungen"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="@string/action_navigation_einstellungen"
+        app:showAsAction="never" />
 
 </menu>
