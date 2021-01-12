@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".suche.AchterbahnSucheController"/>
+        <activity android:name=".achterbahn.AchterbahnController"/>
     </application>
 
 </manifest>

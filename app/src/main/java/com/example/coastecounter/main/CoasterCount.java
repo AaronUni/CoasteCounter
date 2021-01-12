@@ -69,7 +69,7 @@ public class CoasterCount extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.id_action_perstatistik:
-                Intent intent = new Intent(CoasterCount.this, AchterbahnSucheController.class);
+                Intent intent = new Intent(CoasterCount.this, AchterbahnController.class);
                 startActivity(intent);
         }
         return true;
