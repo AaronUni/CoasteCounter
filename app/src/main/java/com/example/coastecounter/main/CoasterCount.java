@@ -1,7 +1,9 @@
 package com.example.coastecounter.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +18,7 @@ import com.example.coastecounter.bewertung.BewertungsController;
 import com.example.coastecounter.dashboard.DashboardController;
 import com.example.coastecounter.park.ParkController;
 import com.example.coastecounter.park.ParkRepo;
+import com.example.coastecounter.suche.AchterbahnSucheController;
 
 public class CoasterCount extends AppCompatActivity {
 
@@ -49,10 +52,10 @@ public class CoasterCount extends AppCompatActivity {
         bAchterbahnzeigen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setContentView(R.layout.achterbahnsuchen);
+                Intent intent = new Intent(CoasterCount.this, AchterbahnSucheController.class);
+                startActivity(intent);
             }
         });
-
     }
 
     @Override
@@ -62,5 +65,14 @@ public class CoasterCount extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.id_action_perstatistik:
+                Intent intent = new Intent(CoasterCount.this, AchterbahnSucheController.class);
+                startActivity(intent);
+        }
+        return true;
+    }
 
 }

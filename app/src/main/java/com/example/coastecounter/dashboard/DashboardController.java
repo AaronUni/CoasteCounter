@@ -8,11 +8,5 @@ import com.example.coastecounter.main.Controller;
 import com.example.coastecounter.main.Model;
 
 public class DashboardController implements Controller {
-    DashboardModel model;
-    DashboardView view;
 
-    public DashboardController(Model m, View v) {
-            model = m;
-            view = v;
-    }
 }
