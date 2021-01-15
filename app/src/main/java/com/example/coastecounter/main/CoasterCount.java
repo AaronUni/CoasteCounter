@@ -54,8 +54,8 @@ public class CoasterCount extends AppCompatActivity {
         setContentView(R.layout.dashboard);
         Toolbar myToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);        //wird benötigt für den Backpfeil  https://stackoverflow.com/questions/35810229/how-to-display-and-set-click-event-on-back-arrow-on-toolbar
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);        //wird benötigt für den Backpfeil  https://stackoverflow.com/questions/35810229/how-to-display-and-set-click-event-on-back-arrow-on-toolbar
         Button bAchterbahnzeigen = findViewById(R.id.button_dashboard_achterbahn);
         bAchterbahnzeigen.setOnClickListener(new View.OnClickListener() {
             @Override
