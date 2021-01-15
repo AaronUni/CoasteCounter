@@ -5,21 +5,24 @@ import com.example.coastecounter.main.Theme;
 import com.example.coastecounter.main.Type;
 import com.example.coastecounter.park.Park;
 
+import java.util.Date;
+import java.util.List;
+
 public class Achterbahn {
 
     private int coasterID;
 
     private String name;
 
-    private long length;
+    private double length;
 
     private double height;
 
-    private int descent;
+    private double descent;
 
     private int inversions;
 
-    private int elements;
+    private String elements;
 
     private int capacity;
 
@@ -29,158 +32,188 @@ public class Achterbahn {
 
     private String manufacturer;
 
-    private int constructed;
+    private String constructed;
 
     private String description;
 
-    private String image;
+    private int speed;
+
+    //private String image;
 
     private Park park;
 
 
     private Achterbahnbewertung achterbahnbewertung;
 
-    private Theme theme;
+    private String theme;
 
-    private Type type;
+    //Type Reference ?
+    private String type;
 
-
-    private AchterbahnController achterbahnController;
+    //Controller gehört nach MVC Prinzip nicht ins Model rein
+    //private AchterbahnController achterbahnController;
 
     public int getCoasterID() {
-        return 0;
+        return this.coasterID;
     }
 
     public String getName() {
-        return null;
+        return this.name;
     }
 
     public void setName(String name) {
-
+        this.name = name;
     }
 
-    public long getLength() {
-        return 0;
+    public double getLength() {
+        return this.length;
     }
 
-    public void setLength(long length) {
-
+    public void setLength(double length) {
+        this.length = length;
     }
 
     public double getHeight() {
-        return 0;
+        return this.height;
     }
 
     public void setHeight(double height) {
-
+        this.height = height;
     }
 
-    public int getDescent() {
-        return 0;
+    public double getDescent() {
+        return this.descent;
     }
 
-    public void setDescent(int descent) {
-
+    public void setDescent(double descent) {
+        this.descent = descent;
     }
 
     public int getInversions() {
-        return 0;
+        return this.inversions;
     }
 
     public void setInversions(int inversions) {
-
+        this.inversions = inversions;
     }
 
-    public int getElements() {
-        return 0;
+    public String getElements() {
+        return this.elements;
     }
 
-    public void setElements(int elements) {
-
+    public void setElements(String elements) {
+        this.elements = elements;
     }
 
-    public Theme getTheme() {
-        return null;
+    public String getTheme() {
+        return this.theme;
     }
 
-    public void setTheme(Theme theme) {
-
+    public void setTheme(String theme) {
+        this.theme = theme;
     }
 
     public int getCapacity() {
-        return 0;
+        return this.capacity;
     }
 
     public void setCapacity(int capacity) {
-
+        this.capacity = capacity;
     }
 
     public int getCars() {
-        return 0;
+        return this.cars;
     }
 
     public void setCars(int cars) {
-
+        this.cars = cars;
     }
 
     public int getTrains() {
-        return 0;
+        return this.trains;
     }
 
     public void setTrains(int trains) {
-
+        this.trains = trains;
     }
 
     public String getManufacturer() {
-        return null;
+        return this.manufacturer;
     }
 
     public void setManufacturer(String manufacturer) {
-
+        this.manufacturer = manufacturer;
     }
 
-    public Type getType() {
-        return null;
+    public String getType() {
+        return this.type;
     }
 
-    public void setType(Type type) {
-
-    }
-
-    /**
-     *
-     */
-    public int getConstructed() {
-        return 0;
+    public void setType(String type) {
+        this.type = type;
     }
 
     /**
      *
      */
-    public void setConstructed(int constructed) {
+    public String getConstructed() {
+        return this.constructed;
+    }
 
+    /**
+     *
+     */
+    public void setConstructed(String constructed) {
+        this.constructed = constructed;
     }
 
     public String getDescription() {
-        return null;
+        return this.description;
     }
 
     /**
      *
      */
     public void setDescription(String description) {
-
+        this.description = description;
     }
-
+    public int getSpeed() {
+        return this.speed;
+    }
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+/**
+ * XML
     public String getImage() {
         return null;
     }
 
-    /**
-     *
-     */
+
     public void setImage(String image) {
 
     }
-
+*/
+    public Achterbahn(int coasterID, String name, double length, double height, double descent, int inversions,
+                      String elements, int capacity, int cars, int trains, String manufacturer, String constructed,
+                      String description, Park park, Achterbahnbewertung achterbahnbewertung, String theme, String type, int speed) {
+        this.coasterID = coasterID;
+        this.name = name;
+        this.length = length;
+        this.height = height;
+        this.descent = descent;
+        this.inversions = inversions;
+        this.elements = elements;
+        this.capacity = capacity;
+        this.cars = cars;
+        this.trains = trains;
+        this.manufacturer = manufacturer;
+        this.constructed = constructed;
+        this.description = description;
+        this.park = park;
+        this.achterbahnbewertung = achterbahnbewertung;
+        this.theme = theme;
+        this.type = type;
+        this.speed = speed;
+    }
 }

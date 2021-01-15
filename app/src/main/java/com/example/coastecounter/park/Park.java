@@ -52,162 +52,188 @@ public class Park {
 	private Parkbetreiber owner;
 
 	public int getParkID() {
-		return 0;
+		return parkID;
+	}
+
+	public void setParkID(int parkID) {
+		this.parkID = parkID;
 	}
 
 	public String getName() {
-		return null;
+		return name;
 	}
 
-	/**
-	 *  
-	 */
 	public void setName(String name) {
-
+		this.name = name;
 	}
 
 	public String getEmail() {
-		return null;
+		return email;
 	}
 
-	/**
-	 *  
-	 */
 	public void setEmail(String email) {
-
+		this.email = email;
 	}
 
 	public String getAddress() {
-		return null;
+		return address;
 	}
 
-	/**
-	 *  
-	 */
 	public void setAddress(String address) {
-
+		this.address = address;
 	}
 
 	public String getTelephone() {
-		return null;
+		return telephone;
 	}
 
-	/**
-	 *  
-	 */
 	public void setTelephone(String telephone) {
-
+		this.telephone = telephone;
 	}
 
 	public String getFax() {
-		return null;
+		return fax;
 	}
 
-	/**
-	 *  
-	 */
 	public void setFax(String fax) {
-
+		this.fax = fax;
 	}
 
-	/**
-	 *  
-	 */
 	public String getImage() {
-		return null;
+		return image;
 	}
 
-	/**
-	 *  
-	 */
 	public void setImage(String image) {
-
-	}
-
-	public Theme getTheme() {
-		return null;
-	}
-
-	/**
-	 *  
-	 */
-	public void setTheme(Theme theme) {
-
+		this.image = image;
 	}
 
 	public int getMaxGuests() {
-		return 0;
+		return maxGuests;
 	}
 
-	/**
-	 *  
-	 */
 	public void setMaxGuests(int maxGuests) {
-
+		this.maxGuests = maxGuests;
 	}
 
 	public Date getOpeningHours() {
-		return null;
+		return openingHours;
 	}
 
-	/**
-	 *  
-	 */
 	public void setOpeningHours(Date openingHours) {
-
+		this.openingHours = openingHours;
 	}
 
 	public Date getClosingHours() {
-		return null;
+		return closingHours;
 	}
 
-	/**
-	 *  
-	 */
 	public void setClosingHours(Date closingHours) {
-
+		this.closingHours = closingHours;
 	}
 
 	public int getSurfaceArea() {
-		return 0;
+		return surfaceArea;
 	}
 
-	/**
-	 *  
-	 */
 	public void setSurfaceArea(int surfaceArea) {
-
+		this.surfaceArea = surfaceArea;
 	}
 
 	public String getDescription() {
-		return null;
+		return description;
 	}
 
-	/**
-	 *  
-	 */
 	public void setDescription(String description) {
-
-	}
-
-	public List<Achterbahn> getAchterbahnen() {
-		return null;
-	}
-
-	public Parkbetreiber getOwner() {
-		return null;
-	}
-
-	public void setOwner(Parkbetreiber owner) {
-
+		this.description = description;
 	}
 
 	public String getWebsite() {
-		return null;
+		return website;
 	}
 
 	public void setWebsite(String website) {
-
+		this.website = website;
 	}
 
+	public Collection<Achterbahn> getAchterbahn() {
+		return achterbahn;
+	}
+
+	public void setAchterbahn(Collection<Achterbahn> achterbahn) {
+		this.achterbahn = achterbahn;
+	}
+
+	public Collection<Achterbahn> getCoasters() {
+		return coasters;
+	}
+
+	public void setCoasters(Collection<Achterbahn> coasters) {
+		this.coasters = coasters;
+	}
+
+	public ParkController getParkController() {
+		return parkController;
+	}
+
+	public void setParkController(ParkController parkController) {
+		this.parkController = parkController;
+	}
+
+	public ParkView getParkView() {
+		return parkView;
+	}
+
+	public void setParkView(ParkView parkView) {
+		this.parkView = parkView;
+	}
+
+	public Parkbewertung getParkbewertung() {
+		return parkbewertung;
+	}
+
+	public void setParkbewertung(Parkbewertung parkbewertung) {
+		this.parkbewertung = parkbewertung;
+	}
+
+	public Theme getTheme() {
+		return theme;
+	}
+
+	public void setTheme(Theme theme) {
+		this.theme = theme;
+	}
+
+	public Parkbetreiber getOwner() {
+		return owner;
+	}
+
+	public void setOwner(Parkbetreiber owner) {
+		this.owner = owner;
+	}
+
+	public Park(int parkID, String name, String email, String address, String telephone, String fax, String image, int maxGuests,
+				Date openingHours, Date closingHours, int surfaceArea, String description, String website, Collection<Achterbahn> achterbahn,
+				Collection<Achterbahn> coasters,  Parkbewertung parkbewertung, Theme theme,
+				Parkbetreiber owner) {
+		this.parkID = parkID;
+		this.name = name;
+		this.email = email;
+		this.address = address;
+		this.telephone = telephone;
+		this.fax = fax;
+		this.image = image;
+		this.maxGuests = maxGuests;
+		this.openingHours = openingHours;
+		this.closingHours = closingHours;
+		this.surfaceArea = surfaceArea;
+		this.description = description;
+		this.website = website;
+		this.achterbahn = achterbahn;
+		this.coasters = coasters;
+		this.parkController = parkController;
+		this.parkView = parkView;
+		this.parkbewertung = parkbewertung;
+		this.theme = theme;
+		this.owner = owner;
+	}
 }

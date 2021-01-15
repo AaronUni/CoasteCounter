@@ -10,7 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import com.example.coastecounter.R;
+import com.example.coastecounter.achterbahn.Achterbahn;
 import com.example.coastecounter.achterbahn.AchterbahnController;
+import com.example.coastecounter.achterbahn.AchterbahnDB;
 import com.example.coastecounter.badge.BadgeController;
 import com.example.coastecounter.badge.BadgeKategorieController;
 import com.example.coastecounter.benutzer.BenutzerController;
@@ -35,6 +37,12 @@ public class CoasterCount extends AppCompatActivity {
     private BadgeController badgeController;
 
     private ParkRepo parkRepo;
+    Achterbahn colossos_HeidePark = new Achterbahn(1, "Colossos - Kampf der Giganten", 1344,
+            50, 48.5, 0, "Airtime Hill, Helix", 1030, 5, 2, "Intamin",
+            "13-04-2001", "Collosos - Kampf der Giganten steht im Heide PArk Resort und ist eine eine Holzachterbahn " +
+            "von Intamin im Out-and-back Layout und wurde zusammen mit Holzbau Cordes im Prefabricated Track verfahren gebaut. Am 19 April 2019 " +
+            "wurde die Bahn nach einem Retrack der Schiene zusammen mit neuer Thematisierung und neuem Soundtrack(IMAScore) wiedereröffnet", null,
+            null, "Feuer", "Prefabricated", 110);
 
     public void main() {
 
