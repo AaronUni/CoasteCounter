@@ -15,6 +15,8 @@ public class AchterbahnView extends AppCompatActivity {
 
     private AchterbahnController achterbahnController;
 
+    private String pos;
+
     public void openCoasterFrame() {
 
     }
@@ -28,6 +30,8 @@ public class AchterbahnView extends AppCompatActivity {
         //getSupportActionBar().setDisplayShowHomeEnabled(true);        //wird benötigt für den Backpfeil  https://stackoverflow.com/questions/35810229/how-to-display-and-set-click-event-on-back-arrow-on-toolbar
         ImageView img = (ImageView) findViewById(R.id.imageView);
         img.setImageResource(R.drawable.coastercounterlogo);
+		Bundle b = getIntent().getExtras();
+		if(b != null) pos = b.getString("id");
         myToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,6 +39,8 @@ public class AchterbahnView extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        AchterbahnDB achterbahnDB = new AchterbahnDB();
+        achterbahnLaden(achterbahnDB.getByName(pos));
     }
 
     @Override
@@ -48,21 +54,21 @@ public class AchterbahnView extends AppCompatActivity {
         TextView name = findViewById(R.id.text_achterbahnanzeigen_name);
         name.setText(a.getName());
         TextView length = findViewById(R.id.text_achterbahnanzeigen_laenge);
-        length.setText((int) a.getLength());
+        length.setText(String.valueOf(a.getLength()));
         TextView height = findViewById(R.id.text_achterbahnanzeigen_hoehe);
-        height.setText((int) a.getHeight());
+        height.setText(String.valueOf(a.getHeight()));
         TextView descent = findViewById(R.id.text_achterbahnanzeigen_abfahrt);
-        descent.setText((int) a.getDescent());
+        descent.setText(String.valueOf(a.getDescent()));
         TextView inversions = findViewById(R.id.text_achterbahnanzeigen_inversionen);
-        inversions.setText(a.getInversions());
+        inversions.setText(String.valueOf(a.getInversions()));
         TextView elements = findViewById(R.id.text_achterbahnanzeigen_elemente);
         elements.setText(a.getElements());
         TextView capacity = findViewById(R.id.text_achterbahnanzeigen_kapazitaet);
-        capacity.setText(a.getCapacity());
+        capacity.setText(String.valueOf(a.getCapacity()));
         TextView cars = findViewById(R.id.text_achterbahnanzeigen_wagen);
-        cars.setText(a.getCars());
+        cars.setText(String.valueOf(a.getCars()));
         TextView trains = findViewById(R.id.text_achterbahnanzeigen_zuege);
-        trains.setText(a.getTrains());
+        trains.setText(String.valueOf(a.getTrains()));
         TextView manufacturer = findViewById(R.id.text_achterbahnanzeigen_erbauer);
         manufacturer.setText(a.getManufacturer());
         TextView constructed = findViewById(R.id.text_achterbahnanzeigen_baujahr);
@@ -70,7 +76,6 @@ public class AchterbahnView extends AppCompatActivity {
         TextView description = findViewById(R.id.text_achterbahnanzeigen_kurzbeschreibung);
         description.setText(a.getDescription());
         TextView speed = findViewById(R.id.text_achterbahnanzeigen_geschwindigkeit);
-        speed.setText(a.getSpeed());
-    }
+        speed.setText(String.valueOf(a.getSpeed()));    }
 
 }

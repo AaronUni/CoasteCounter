@@ -1,12 +1,7 @@
 package com.example.coastecounter.achterbahn;
 
 import com.example.coastecounter.bewertung.Achterbahnbewertung;
-import com.example.coastecounter.main.Theme;
-import com.example.coastecounter.main.Type;
 import com.example.coastecounter.park.Park;
-
-import java.util.Date;
-import java.util.List;
 
 public class Achterbahn {
 
@@ -54,11 +49,11 @@ public class Achterbahn {
     //private AchterbahnController achterbahnController;
 
     public int getCoasterID() {
-        return this.coasterID;
+        return coasterID;
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public void setName(String name) {
@@ -66,7 +61,7 @@ public class Achterbahn {
     }
 
     public double getLength() {
-        return this.length;
+        return length;
     }
 
     public void setLength(double length) {
@@ -74,7 +69,7 @@ public class Achterbahn {
     }
 
     public double getHeight() {
-        return this.height;
+        return height;
     }
 
     public void setHeight(double height) {
@@ -82,7 +77,7 @@ public class Achterbahn {
     }
 
     public double getDescent() {
-        return this.descent;
+        return descent;
     }
 
     public void setDescent(double descent) {
@@ -90,7 +85,7 @@ public class Achterbahn {
     }
 
     public int getInversions() {
-        return this.inversions;
+        return inversions;
     }
 
     public void setInversions(int inversions) {
@@ -98,7 +93,7 @@ public class Achterbahn {
     }
 
     public String getElements() {
-        return this.elements;
+        return elements;
     }
 
     public void setElements(String elements) {
@@ -106,7 +101,7 @@ public class Achterbahn {
     }
 
     public String getTheme() {
-        return this.theme;
+        return theme;
     }
 
     public void setTheme(String theme) {

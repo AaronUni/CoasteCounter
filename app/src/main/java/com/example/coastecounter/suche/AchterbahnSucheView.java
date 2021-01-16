@@ -4,18 +4,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.SearchView;
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import com.example.coastecounter.R;
+import com.example.coastecounter.achterbahn.AchterbahnDB;
+import com.example.coastecounter.achterbahn.AchterbahnView;
 import com.example.coastecounter.dashboard.DashboardView;
 
 import java.util.ArrayList;
 
 public class AchterbahnSucheView extends AppCompatActivity {
-    ArrayList myList;
+    ArrayList<String> myList;
     ArrayAdapter adapter;
     SearchView searchView;
 
@@ -34,12 +34,11 @@ public class AchterbahnSucheView extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        myList = new ArrayList<String>();
-        myList.add("deine");
-        myList.add("Fadda");
+        AchterbahnDB achterbahnDB = new AchterbahnDB();
+        myList = achterbahnDB.getListByName();
 
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, myList);
-        ListView listView = findViewById(R.id.list_view);
+        final ListView listView = findViewById(R.id.list_view);
         listView.setAdapter(adapter);
         searchView = findViewById(R.id.searchview_achterbahnsuchen);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -49,16 +48,23 @@ public class AchterbahnSucheView extends AppCompatActivity {
                 if(myList.contains(query)) adapter.getFilter().filter(query);
                 return false;
             }
-
             @Override
             public boolean onQueryTextChange(String newText) {
                 adapter.getFilter().filter(newText);
                 return false;
             }
         });
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(AchterbahnSucheView.this, AchterbahnView.class);
+                Bundle b = new Bundle();
+                b.putString("id", (String) parent.getItemAtPosition(position));
+                intent.putExtras(b);
+                startActivity(intent);
+            }
+        });
     }
-
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
