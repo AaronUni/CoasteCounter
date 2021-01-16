@@ -2,17 +2,9 @@ package com.example.coastecounter.main;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
-import androidx.appcompat.widget.Toolbar;
-import com.example.coastecounter.R;
 import com.example.coastecounter.achterbahn.Achterbahn;
 import com.example.coastecounter.achterbahn.AchterbahnController;
-import com.example.coastecounter.achterbahn.AchterbahnDB;
 import com.example.coastecounter.badge.BadgeController;
 import com.example.coastecounter.badge.BadgeKategorieController;
 import com.example.coastecounter.benutzer.BenutzerController;
@@ -21,7 +13,6 @@ import com.example.coastecounter.dashboard.DashboardController;
 import com.example.coastecounter.dashboard.DashboardView;
 import com.example.coastecounter.park.ParkController;
 import com.example.coastecounter.park.ParkRepo;
-import com.example.coastecounter.suche.AchterbahnSucheController;
 
 public class CoasterCount extends AppCompatActivity {
 

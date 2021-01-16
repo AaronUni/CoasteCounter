@@ -25,15 +25,15 @@ public class AchterbahnDB {
         this.achterbahnList.add(colossos_HeidePark);
     }
 
-    public void addAchterbahn(Achterbahn bahn) {
+    public void add(Achterbahn bahn) {
         achterbahnList.add(bahn);
     }
 
-    public List<Achterbahn> getAchterbahnList() {
+    public List<Achterbahn> getList() {
         return this.achterbahnList;
     }
 
-    public Achterbahn getAchterbahnById(int coasterID) {
+    public Achterbahn getById(int coasterID) {
         Achterbahn result = null;
         for (int i = 0; i < achterbahnList.size(); i++) {
             if (achterbahnList.get(i).getCoasterID() == coasterID) {
@@ -44,7 +44,7 @@ public class AchterbahnDB {
         return result;
     }
 
-    public Achterbahn getAchterbahnByName(String name) {
+    public Achterbahn getByName(String name) {
         Achterbahn result = null;
         for (int i = 0; i < achterbahnList.size(); i++) {
             if (achterbahnList.get(i).getName() == name) {
