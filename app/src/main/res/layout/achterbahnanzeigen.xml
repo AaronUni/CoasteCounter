@@ -265,14 +265,14 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                            android:id="@+id/textView38"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textStyle="bold"
-                            android:text="Type:"/>
+                        android:id="@+id/textView38"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Geschwindigkeit:"
+                        android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/text_achterbahnanzeigen_type"
+                        android:id="@+id/text_achterbahnanzeigen_geschwindigkeit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="TextView"

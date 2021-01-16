@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import com.example.coastecounter.R;
@@ -41,6 +42,35 @@ public class AchterbahnView extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.navigation, menu);
         return true;
+    }
+
+    private void achterbahnLaden(Achterbahn a) {
+        TextView name = findViewById(R.id.text_achterbahnanzeigen_name);
+        name.setText(a.getName());
+        TextView length = findViewById(R.id.text_achterbahnanzeigen_laenge);
+        length.setText((int) a.getLength());
+        TextView height = findViewById(R.id.text_achterbahnanzeigen_hoehe);
+        height.setText((int) a.getHeight());
+        TextView descent = findViewById(R.id.text_achterbahnanzeigen_abfahrt);
+        descent.setText((int) a.getDescent());
+        TextView inversions = findViewById(R.id.text_achterbahnanzeigen_inversionen);
+        inversions.setText(a.getInversions());
+        TextView elements = findViewById(R.id.text_achterbahnanzeigen_elemente);
+        elements.setText(a.getElements());
+        TextView capacity = findViewById(R.id.text_achterbahnanzeigen_kapazitaet);
+        capacity.setText(a.getCapacity());
+        TextView cars = findViewById(R.id.text_achterbahnanzeigen_wagen);
+        cars.setText(a.getCars());
+        TextView trains = findViewById(R.id.text_achterbahnanzeigen_zuege);
+        trains.setText(a.getTrains());
+        TextView manufacturer = findViewById(R.id.text_achterbahnanzeigen_erbauer);
+        manufacturer.setText(a.getManufacturer());
+        TextView constructed = findViewById(R.id.text_achterbahnanzeigen_baujahr);
+        constructed.setText(a.getConstructed());
+        TextView description = findViewById(R.id.text_achterbahnanzeigen_kurzbeschreibung);
+        description.setText(a.getDescription());
+        TextView speed = findViewById(R.id.text_achterbahnanzeigen_geschwindigkeit);
+        speed.setText(a.getSpeed());
     }
 
 }
