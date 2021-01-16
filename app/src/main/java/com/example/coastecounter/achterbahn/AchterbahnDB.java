@@ -14,7 +14,7 @@ public class AchterbahnDB {
     public static Achterbahn kaernan_HansaPark = new Achterbahn(2, "Schwur des Kärnan", 1235, 73, 67.0,
             0, "Vertical Lift, Heardline Roll", 850, 4, 3, "Gerstlauer", "01-07-2015",
             "Der Schwur des Kärnan steht im Norddeutschen Hansapark und ist ein Hypercoaster vom deutschen Hersteller Gerstlauer. Zusammen mit " +
-            "Silver Star ist Kärnan mit 73m die höchste Achterbahn Deutschlands.", null, null, "Mittelalter", "Infinity Coaster, Hyper Coaster", 127);
+                    "Silver Star ist Kärnan mit 73m die höchste Achterbahn Deutschlands.", null, null, "Mittelalter", "Infinity Coaster, Hyper Coaster", 127);
     public static Achterbahn blueFire_Europapark = new Achterbahn(3, "Blue Fire Megacoaster", 1056, 38, 32, 4,
             "LSM Launch 0-100 2,5sek., Twisted Horsehoe Roll, In-Line Twist, Heardline Roll, Looping", 1720, 5, 5, "Mack Rides", "04-04-2009",
             "Blue Fire ist der erste Launch Coaster von Mack Rides. Sie katapultiert die Fahrgäste mit hilfe einem LSM Antriebs von 0-100km/h in 2,5 sek.. ", null,
@@ -23,6 +23,7 @@ public class AchterbahnDB {
             "01-07-1980", "Nessi ist die erste stationäre Looping-Achterbahn deutschlands und wurde vom Hersteller Schwarzkopf gebaut.", null, null,
             "Schottland", "Looping Coaster", 85);
     private List<Achterbahn> achterbahnList = new ArrayList<Achterbahn>();
+
     public AchterbahnDB() {
 
         this.achterbahnList.add(colossos_HeidePark);
@@ -49,6 +50,15 @@ public class AchterbahnDB {
         }
         return result;
     }
+
+    public ArrayList<String> getListByName() {
+        ArrayList<String> out = new ArrayList<String>();
+        for (Achterbahn a : achterbahnList) {
+            out.add(a.getName());
+        }
+        return out;
+    }
+
 
     public Achterbahn getByName(String name) {
         Achterbahn result = null;
