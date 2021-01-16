@@ -1,7 +1,5 @@
 package com.example.coastecounter.park;
 
-import com.example.coastecounter.achterbahn.Achterbahn;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,7 +13,7 @@ public class ParkDB {
             "www.hansapark.de", null, null, null, null, null);
     Park europaPark = new Park(3, "Europa-Park", "info@europapark.de", "Europa-Park-Straße 2, \n77977 Rust", "07822 77-6688",
             "07822 77-11605", null, 5800000, null, null, 95, "Europpark liegt in Rust(Baden-Württemberg) und ist mit rund 5,8 Millionen Besuchern(2019)" +
-            "der meistbesuchte Freizeitpark im deutschsprachigen Raum. Der Europa-Park öffnte 12 Juli 1975 zunächst als Ausstellungsfläche des Hauseignen Fahrgeschäftehersteller.", "www.europapark.de",
+            "der meistbesuchte Freizeitpark im deutschsprachigen Raum. Der Europa-Park öffnte 12 Juli 1975 zunächst als Ausstellungsfläche des hauseignen Fahrgeschäftehersteller.", "www.europapark.de",
             null, null, null, null, null);
 
 
