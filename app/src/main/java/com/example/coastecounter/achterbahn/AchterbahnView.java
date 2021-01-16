@@ -10,12 +10,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import com.example.coastecounter.R;
 import com.example.coastecounter.dashboard.DashboardView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class AchterbahnView extends AppCompatActivity {
 
     private AchterbahnController achterbahnController;
 
     private String pos;
+
+    private int count = 0;
 
     public void openCoasterFrame() {
 
@@ -40,6 +43,15 @@ public class AchterbahnView extends AppCompatActivity {
         });
         AchterbahnDB achterbahnDB = new AchterbahnDB();
         achterbahnLaden(achterbahnDB.getByName(pos));
+        FloatingActionButton bCount = findViewById(R.id.button_achterbahnanzeigen_count);
+        bCount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                count += 1;
+                TextView counter = findViewById(R.id.textView_counter);
+                counter.setText(String.valueOf(count));
+            }
+        });
     }
 
     @Override
@@ -80,6 +92,8 @@ public class AchterbahnView extends AppCompatActivity {
         theme.setText(a.getTheme());
         ImageView picture = findViewById(R.id.imageView_achterbahnanzeigen);
         picture.setImageResource(a.getImage());
+        TextView counter = findViewById(R.id.textView_counter);
+        counter.setText(String.valueOf(count));
     }
 
 }
