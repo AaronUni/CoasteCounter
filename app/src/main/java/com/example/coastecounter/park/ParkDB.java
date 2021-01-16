@@ -50,7 +50,7 @@ public class ParkDB {
     public Park getByName(String name) {
         Park result = null;
         for (int i = 0; i < parkList.size(); i++) {
-            if (parkList.get(i).getName() == name) {
+            if (parkList.get(i).getName().equals(name)) {
                 result = parkList.get(i);
                 break;
             }
