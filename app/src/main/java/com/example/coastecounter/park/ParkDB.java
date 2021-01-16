@@ -20,12 +20,14 @@ public class ParkDB {
     private List<Park> parkList = new ArrayList<Park>();
 
     public ParkDB() {
-        heidePark.addAchterbahn(AchterbahnDB.colossos_HeidePark);
+        AchterbahnDB achterbahnDB = new AchterbahnDB();
+        heidePark.addAchterbahn(achterbahnDB.getById(0));
         this.parkList.add(heidePark);
-        hansaPark.addAchterbahn(AchterbahnDB.kaernan_HansaPark);
+        hansaPark.addAchterbahn(achterbahnDB.getById(1));
         this.parkList.add(hansaPark);
-        europaPark.addAchterbahn(AchterbahnDB.blueFire_Europapark);
+        europaPark.addAchterbahn(achterbahnDB.getById(2));
         this.parkList.add(europaPark);
+        hansaPark.addAchterbahn(achterbahnDB.getById(3));
     }
 
     public void add(Park park) {

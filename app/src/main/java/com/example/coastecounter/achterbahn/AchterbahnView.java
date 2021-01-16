@@ -79,7 +79,7 @@ public class AchterbahnView extends AppCompatActivity {
         TextView theme = findViewById(R.id.text_achterbahnanzeigen_theme);
         theme.setText(a.getTheme());
         ImageView picture = findViewById(R.id.imageView_achterbahnanzeigen);
-        picture.setImageResource(R.drawable.colossos);
+        picture.setImageResource(a.getImage());
     }
 
 }

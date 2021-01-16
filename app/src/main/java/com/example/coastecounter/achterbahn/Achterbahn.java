@@ -33,7 +33,7 @@ public class Achterbahn {
 
     private int speed;
 
-    //private String image;
+    private int image;
 
     private Park park;
 
@@ -178,7 +178,12 @@ public class Achterbahn {
     public void setSpeed(int speed) {
         this.speed = speed;
     }
-/**
+
+    public int getImage() {
+        return image;
+    }
+
+    /**
  * XML
     public String getImage() {
         return null;
@@ -191,7 +196,7 @@ public class Achterbahn {
 */
     public Achterbahn(int coasterID, String name, double length, double height, double descent, int inversions,
                       String elements, int capacity, int cars, int trains, String manufacturer, String constructed,
-                      String description, Park park, Achterbahnbewertung achterbahnbewertung, String theme, String type, int speed) {
+                      String description, Park park, Achterbahnbewertung achterbahnbewertung, String theme, String type, int speed, int image) {
         this.coasterID = coasterID;
         this.name = name;
         this.length = length;
@@ -210,5 +215,6 @@ public class Achterbahn {
         this.theme = theme;
         this.type = type;
         this.speed = speed;
+        this.image = image;
     }
 }
