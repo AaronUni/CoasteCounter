@@ -16,4 +16,5 @@
     <string name="action_navigation_abmelden">Abmelden</string>
     <string name="string_achterbahnanzeigen_name">Achterbahnname</string>
     <string name="string_achterbahnsuchen">Suchen</string>
+    <string name="string_searchFail">Item not found</string>
 </resources>
