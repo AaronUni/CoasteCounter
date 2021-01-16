@@ -27,29 +27,19 @@ public class Park {
 
 	private int maxGuests;
 
-	private Date openingHours;
-
-	private Date closingHours;
-
 	private int surfaceArea;
 
 	private String description;
 
 	private String website;
 
-	private Collection<Achterbahn> achterbahn;
-
-	private Collection<Achterbahn> coasters;
-
-	private ParkController parkController;
-
-	private ParkView parkView;
+	private List<Achterbahn> achterbahnen;
 
 	private Parkbewertung parkbewertung;
 
-	private Theme theme;
+	private String theme;
 
-	private Parkbetreiber owner;
+	private String owner;
 
 	public int getParkID() {
 		return parkID;
@@ -115,21 +105,6 @@ public class Park {
 		this.maxGuests = maxGuests;
 	}
 
-	public Date getOpeningHours() {
-		return openingHours;
-	}
-
-	public void setOpeningHours(Date openingHours) {
-		this.openingHours = openingHours;
-	}
-
-	public Date getClosingHours() {
-		return closingHours;
-	}
-
-	public void setClosingHours(Date closingHours) {
-		this.closingHours = closingHours;
-	}
 
 	public int getSurfaceArea() {
 		return surfaceArea;
@@ -155,36 +130,15 @@ public class Park {
 		this.website = website;
 	}
 
-	public Collection<Achterbahn> getAchterbahn() {
-		return achterbahn;
+	public List<Achterbahn> getAchterbahnen() {
+		return this.achterbahnen;
 	}
 
-	public void setAchterbahn(Collection<Achterbahn> achterbahn) {
-		this.achterbahn = achterbahn;
+	public void setAchterbahn(List<Achterbahn> achterbahnen) {
+		this.achterbahnen = achterbahnen;
 	}
-
-	public Collection<Achterbahn> getCoasters() {
-		return coasters;
-	}
-
-	public void setCoasters(Collection<Achterbahn> coasters) {
-		this.coasters = coasters;
-	}
-
-	public ParkController getParkController() {
-		return parkController;
-	}
-
-	public void setParkController(ParkController parkController) {
-		this.parkController = parkController;
-	}
-
-	public ParkView getParkView() {
-		return parkView;
-	}
-
-	public void setParkView(ParkView parkView) {
-		this.parkView = parkView;
+	public void addAchterbahn(Achterbahn bahn) {
+		this.achterbahnen.add(bahn);
 	}
 
 	public Parkbewertung getParkbewertung() {
@@ -195,26 +149,26 @@ public class Park {
 		this.parkbewertung = parkbewertung;
 	}
 
-	public Theme getTheme() {
+	public String getTheme() {
 		return theme;
 	}
 
-	public void setTheme(Theme theme) {
+	public void setTheme(String theme) {
 		this.theme = theme;
 	}
 
-	public Parkbetreiber getOwner() {
+	public String getOwner() {
 		return owner;
 	}
 
-	public void setOwner(Parkbetreiber owner) {
+	public void setOwner(String owner) {
 		this.owner = owner;
 	}
 
 	public Park(int parkID, String name, String email, String address, String telephone, String fax, String image, int maxGuests,
-				Date openingHours, Date closingHours, int surfaceArea, String description, String website, Collection<Achterbahn> achterbahn,
-				Collection<Achterbahn> coasters,  Parkbewertung parkbewertung, Theme theme,
-				Parkbetreiber owner) {
+				int surfaceArea, String description, String website, List<Achterbahn> achterbahnen,
+				Parkbewertung parkbewertung, String theme,
+				String owner) {
 		this.parkID = parkID;
 		this.name = name;
 		this.email = email;
@@ -223,15 +177,11 @@ public class Park {
 		this.fax = fax;
 		this.image = image;
 		this.maxGuests = maxGuests;
-		this.openingHours = openingHours;
-		this.closingHours = closingHours;
 		this.surfaceArea = surfaceArea;
 		this.description = description;
 		this.website = website;
-		this.achterbahn = achterbahn;
-		this.coasters = coasters;
-		this.parkController = parkController;
-		this.parkView = parkView;
+		this.achterbahnen = achterbahnen;
+		//this.coasters = coasters;
 		this.parkbewertung = parkbewertung;
 		this.theme = theme;
 		this.owner = owner;
