@@ -17,8 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".suche.AchterbahnSucheController"/>
-        <activity android:name=".achterbahn.AchterbahnController"/>
+        <activity android:name=".suche.AchterbahnSucheView"/>
+        <activity android:name=".achterbahn.AchterbahnView"/>
+        <activity android:name=".dashboard.DashboardView"/>
     </application>
 
 </manifest>
