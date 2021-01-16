@@ -27,11 +27,10 @@ public class AchterbahnView extends AppCompatActivity {
         Toolbar myToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        //getSupportActionBar().setDisplayShowHomeEnabled(true);        //wird benötigt für den Backpfeil  https://stackoverflow.com/questions/35810229/how-to-display-and-set-click-event-on-back-arrow-on-toolbar
-        ImageView img = (ImageView) findViewById(R.id.imageView);
+        ImageView img = (ImageView) findViewById(R.id.imageView_achterbahnanzeigen);
         img.setImageResource(R.drawable.coastercounterlogo);
-		Bundle b = getIntent().getExtras();
-		if(b != null) pos = b.getString("id");
+        Bundle b = getIntent().getExtras();
+        if (b != null) pos = b.getString("id");
         myToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,6 +78,8 @@ public class AchterbahnView extends AppCompatActivity {
         speed.setText(String.valueOf(a.getSpeed()));
         TextView theme = findViewById(R.id.text_achterbahnanzeigen_theme);
         theme.setText(a.getTheme());
+        ImageView picture = findViewById(R.id.imageView_achterbahnanzeigen);
+        picture.setImageResource(R.drawable.colossos);
     }
 
 }
