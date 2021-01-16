@@ -20,9 +20,13 @@ public class AchterbahnDB {
             "Blue Fire ist der erste Launch Coaster von Mack Rides. Sie katapultiert die Fahrgäste mit hilfe einem LSM Antriebs von 0-100km/h in 2,5 sek.. ", null,
             null, null, "Lunched Coaster - Mega Coaster", 100);
 
+
     private List<Achterbahn> achterbahnList = new ArrayList<Achterbahn>();
     public AchterbahnDB() {
+
         this.achterbahnList.add(colossos_HeidePark);
+        this.achterbahnList.add(kaernan_HansaPark);
+        this.achterbahnList.add(blueFire_Europapark);
     }
 
     public void add(Achterbahn bahn) {
