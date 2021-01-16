@@ -22,7 +22,7 @@ public class AchterbahnDB {
             "LSM Launch 0-100 2,5sek.\n Twisted Horsehoe Roll\n In-Line Twist, Heardline Roll\n Looping", 1720, 5, 5, "Mack Rides", "04-04-2009",
             "Blue Fire ist der erste Launch Coaster von Mack Rides. Sie katapultiert die Fahrgäste mit hilfe einem LSM Antriebs von 0-100km/h in 2,5 sek.. ", null,
             null, "Island", "Lunched Coaster - Mega Coaster", 100,R.drawable.bluefire);
-    private static Achterbahn nessiHansaPark = new Achterbahn(3, "Nessi", 741, 26, 24, 1, "Looping\n Helix", 1700, 7, 2, "Schwarzkopf",
+    private static Achterbahn nessieHansaPark = new Achterbahn(3, "Nessie", 741, 26, 24, 1, "Looping\n Helix", 1700, 7, 2, "Schwarzkopf",
             "01-07-1980", "Nessi ist die erste stationäre Looping-Achterbahn deutschlands und wurde vom Hersteller Schwarzkopf gebaut.", null, null,
             "Schottland", "Looping Coaster", 85, R.drawable.nessi);
     private List<Achterbahn> achterbahnList = new ArrayList<>();
@@ -32,7 +32,7 @@ public class AchterbahnDB {
         this.achterbahnList.add(colossosHeidePark);
         this.achterbahnList.add(kaernanHansaPark);
         this.achterbahnList.add(blueFireEuropapark);
-        this.achterbahnList.add(nessiHansaPark);
+        this.achterbahnList.add(nessieHansaPark);
     }
 
     public void add(Achterbahn bahn) {
