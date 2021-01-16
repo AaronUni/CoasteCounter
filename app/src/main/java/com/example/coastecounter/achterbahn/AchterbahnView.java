@@ -76,6 +76,9 @@ public class AchterbahnView extends AppCompatActivity {
         TextView description = findViewById(R.id.text_achterbahnanzeigen_kurzbeschreibung);
         description.setText(a.getDescription());
         TextView speed = findViewById(R.id.text_achterbahnanzeigen_geschwindigkeit);
-        speed.setText(String.valueOf(a.getSpeed()));    }
+        speed.setText(String.valueOf(a.getSpeed()));
+        TextView theme = findViewById(R.id.text_achterbahnanzeigen_theme);
+        theme.setText(a.getTheme());
+    }
 
 }
