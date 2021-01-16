@@ -62,27 +62,28 @@
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_gravity="center"
-                    android:text="TextView" />
+                    android:layout_weight="1"
+                    android:text="Bisher gefahren: " />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/textView_counter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:textAlignment="center"
                     android:layout_weight="1"
-                    android:text="TextView" />
+                    android:text="@string/string_na"
+                    />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:id="@+id/floatingActionButton2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:paddingRight="15dp"
                     android:clickable="true"
                     android:src="@android:drawable/ic_input_add"
-                    android:layout_gravity="center"
                     app:backgroundTint="@color/colorPrimary" />
 
             </LinearLayout>
