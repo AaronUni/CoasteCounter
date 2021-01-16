@@ -45,7 +45,7 @@ public class AchterbahnSucheView extends AppCompatActivity {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 searchView.clearFocus();
-                if(myList.contains(query)) adapter.getFilter().filter(query);
+                if (myList.contains(query)) adapter.getFilter().filter(query);
                 return false;
             }
             @Override
