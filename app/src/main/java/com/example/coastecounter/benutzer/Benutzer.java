@@ -4,117 +4,117 @@ import com.example.coastecounter.badge.Badge;
 
 public class Benutzer {
 
-	private int userID;
+    private int userID;
 
-	private String username;
+    private String username;
 
-	private String password;
+    private String password;
 
-	private String email;
+    private String email;
 
-	private String name;
+    private String name;
 
-	private String surname;
+    private String surname;
 
-	private String city;
+    private String city;
 
-	private int zip;
+    private int zip;
 
-	private boolean loggedIn;
+    private boolean loggedIn;
 
-	private Badge badge;
+    private Badge badge;
 
-	private BenutzerController benutzerController;
+    private BenutzerController benutzerController;
 
-	/**
-	 *  
-	 */
-	public int getUserID() {
-		return 0;
-	}
+    /**
+     *
+     */
+    public int getUserID() {
+        return 0;
+    }
 
-	public String getUsername() {
-		return null;
-	}
+    public String getUsername() {
+        return null;
+    }
 
-	/**
-	 *  
-	 */
-	public void setUsername(String username) {
+    /**
+     *
+     */
+    public void setUsername(String username) {
 
-	}
+    }
 
-	/**
-	 *  
-	 */
-	public void setPassword(String password) {
+    /**
+     *
+     */
+    public void setPassword(String password) {
 
-	}
+    }
 
-	public String getEmail() {
-		return null;
-	}
+    public String getEmail() {
+        return null;
+    }
 
-	/**
-	 *  
-	 */
-	public void setEmail(String email) {
+    /**
+     *
+     */
+    public void setEmail(String email) {
 
-	}
+    }
 
-	public String getName() {
-		return null;
-	}
+    public String getName() {
+        return null;
+    }
 
-	/**
-	 *  
-	 */
-	public void setName(String name) {
+    /**
+     *
+     */
+    public void setName(String name) {
 
-	}
+    }
 
-	public String getSurname() {
-		return null;
-	}
+    public String getSurname() {
+        return null;
+    }
 
-	/**
-	 *  
-	 */
-	public void setSurname(String surname) {
+    /**
+     *
+     */
+    public void setSurname(String surname) {
 
-	}
+    }
 
-	public String getCity() {
-		return null;
-	}
+    public String getCity() {
+        return null;
+    }
 
-	/**
-	 *  
-	 */
-	public void setCity(String city) {
+    /**
+     *
+     */
+    public void setCity(String city) {
 
-	}
+    }
 
-	public int getZip() {
-		return 0;
-	}
+    public int getZip() {
+        return 0;
+    }
 
-	/**
-	 *  
-	 */
-	public void setZip(int zip) {
+    /**
+     *
+     */
+    public void setZip(int zip) {
 
-	}
+    }
 
-	public boolean getLoggedIn() {
-		return false;
-	}
+    public boolean getLoggedIn() {
+        return false;
+    }
 
-	/**
-	 *  
-	 */
-	public void setLoggedIn(boolean loggedIn) {
+    /**
+     *
+     */
+    public void setLoggedIn(boolean loggedIn) {
 
-	}
+    }
 
 }

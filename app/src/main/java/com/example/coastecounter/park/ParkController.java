@@ -4,22 +4,22 @@ import com.example.coastecounter.main.CoasterCount;
 
 public class ParkController {
 
-	private Park park;
+    private Park park;
 
-	private ParkView parkView;
+    private ParkView parkView;
 
-	private CoasterCount coasterCount;
+    private CoasterCount coasterCount;
 
-	public void createParkView(Park park) {
+    public void createParkView(Park park) {
 
-	}
+    }
 
-	public void createParkStatisticsView(Park park) {
+    public void createParkStatisticsView(Park park) {
 
-	}
+    }
 
-	public void renderView() {
+    public void renderView() {
 
-	}
+    }
 
 }

@@ -9,10 +9,10 @@ import com.example.coastecounter.achterbahn.Achterbahn;
  */
 public class Type {
 
-	private int typeID;
+    private int typeID;
 
-	private java.lang.String name;
+    private java.lang.String name;
 
-	private Achterbahn achterbahn;
+    private Achterbahn achterbahn;
 
 }

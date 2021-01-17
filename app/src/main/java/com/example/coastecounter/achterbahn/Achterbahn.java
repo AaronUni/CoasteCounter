@@ -1,7 +1,6 @@
 package com.example.coastecounter.achterbahn;
 
 import com.example.coastecounter.bewertung.Achterbahnbewertung;
-import com.example.coastecounter.park.Park;
 
 public class Achterbahn {
 
@@ -47,6 +46,42 @@ public class Achterbahn {
 
     //Controller gehört nach MVC Prinzip nicht ins Model rein
     //private AchterbahnController achterbahnController;
+
+    /**
+     * XML
+     * public String getImage() {
+     * return null;
+     * }
+     * <p>
+     * <p>
+     * public void setImage(String image) {
+     * <p>
+     * }
+     */
+    public Achterbahn(int coasterID, String name, double length, double height, double descent, int inversions,
+                      String elements, int capacity, int cars, int trains, String manufacturer, String constructed,
+                      String description, String park, Achterbahnbewertung achterbahnbewertung,
+                      String theme, String type, int speed, int image) {
+        this.coasterID = coasterID;
+        this.name = name;
+        this.length = length;
+        this.height = height;
+        this.descent = descent;
+        this.inversions = inversions;
+        this.elements = elements;
+        this.capacity = capacity;
+        this.cars = cars;
+        this.trains = trains;
+        this.manufacturer = manufacturer;
+        this.constructed = constructed;
+        this.description = description;
+        this.park = park;
+        this.achterbahnbewertung = achterbahnbewertung;
+        this.theme = theme;
+        this.type = type;
+        this.speed = speed;
+        this.image = image;
+    }
 
     public int getCoasterID() {
         return coasterID;
@@ -172,9 +207,11 @@ public class Achterbahn {
     public void setDescription(String description) {
         this.description = description;
     }
+
     public int getSpeed() {
         return this.speed;
     }
+
     public void setSpeed(int speed) {
         this.speed = speed;
     }
@@ -185,40 +222,5 @@ public class Achterbahn {
 
     public String getPark() {
         return park;
-    }
-
-    /**
- * XML
-    public String getImage() {
-        return null;
-    }
-
-
-    public void setImage(String image) {
-
-    }
-*/
-    public Achterbahn(int coasterID, String name, double length, double height, double descent, int inversions,
-                      String elements, int capacity, int cars, int trains, String manufacturer, String constructed,
-                      String description, String park, Achterbahnbewertung achterbahnbewertung, String theme, String type, int speed, int image) {
-        this.coasterID = coasterID;
-        this.name = name;
-        this.length = length;
-        this.height = height;
-        this.descent = descent;
-        this.inversions = inversions;
-        this.elements = elements;
-        this.capacity = capacity;
-        this.cars = cars;
-        this.trains = trains;
-        this.manufacturer = manufacturer;
-        this.constructed = constructed;
-        this.description = description;
-        this.park = park;
-        this.achterbahnbewertung = achterbahnbewertung;
-        this.theme = theme;
-        this.type = type;
-        this.speed = speed;
-        this.image = image;
     }
 }

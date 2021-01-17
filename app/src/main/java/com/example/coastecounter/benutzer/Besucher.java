@@ -81,11 +81,14 @@ public class Besucher extends Benutzer {
         return false;
     }
 
-    public boolean editCoaster(Achterbahn coaster, String name, long lenght, double height, Park park, String description, String image) {
+    public boolean editCoaster(Achterbahn coaster, String name, long lenght, double height, Park park,
+                               String description, String image) {
         return false;
     }
 
-    public boolean editPark(Park park, String name, String email, String adress, String telephone, String image, Parkbetreiber owner, Theme theme, String website, Date openingHours, Date closingHours, String description) {
+    public boolean editPark(Park park, String name, String email, String adress, String telephone,
+                            String image, Parkbetreiber owner, Theme theme, String website,
+                            Date openingHours, Date closingHours, String description) {
         return false;
     }
 

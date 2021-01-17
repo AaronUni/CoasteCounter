@@ -6,10 +6,10 @@ public class BadgeController {
 
 //	public void createUserBadgeView(user :Besucher);
 
-	private Badge badge;
+    private Badge badge;
 
-	private BadgeView badgeView;
+    private BadgeView badgeView;
 
-	private CoasterCount coasterCount;
+    private CoasterCount coasterCount;
 
 }

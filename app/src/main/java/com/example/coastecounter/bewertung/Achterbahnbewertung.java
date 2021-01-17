@@ -1,39 +1,35 @@
 package com.example.coastecounter.bewertung;
 
-import com.example.coastecounter.bewertung.Bewertung;
-import com.example.coastecounter.bewertung.BewertungsController;
 import com.example.coastecounter.achterbahn.Achterbahn;
 
-public class Achterbahnbewertung implements Bewertung{
+public class Achterbahnbewertung implements Bewertung {
 
-	private Achterbahn achterbahn;
+    private Achterbahn achterbahn;
 
-	private BewertungsController bewertungsController;
-
-
-	/**
-	 * @see Bewertung#getAvg()
-	 */
-	public double getAvg() {
-		return 0;
-	}
+    private BewertungsController bewertungsController;
 
 
-	/**
-	 * @see Bewertung#setStars(int)
-	 * 
-	 *  
-	 */
-	public void setStars(int stars) {
-
-	}
+    /**
+     * @see Bewertung#getAvg()
+     */
+    public double getAvg() {
+        return 0;
+    }
 
 
-	/**
-	 * @see Bewertung#getStars()
-	 */
-	public void getStars() {
+    /**
+     * @see Bewertung#setStars(int)
+     */
+    public void setStars(int stars) {
 
-	}
+    }
+
+
+    /**
+     * @see Bewertung#getStars()
+     */
+    public void getStars() {
+
+    }
 
 }

@@ -4,16 +4,16 @@ import com.example.coastecounter.main.CoasterCount;
 
 public class BewertungsController {
 
-	private Parkbewertung parkbewertung;
+    private Parkbewertung parkbewertung;
 
-	private Achterbahnbewertung achterbahnbewertung;
+    private Achterbahnbewertung achterbahnbewertung;
 
-	private BewertungsView bewertungsView;
+    private BewertungsView bewertungsView;
 
-	private CoasterCount coasterCount;
+    private CoasterCount coasterCount;
 
-	public void createRatingsView(Bewertung rating) {
+    public void createRatingsView(Bewertung rating) {
 
-	}
+    }
 
 }

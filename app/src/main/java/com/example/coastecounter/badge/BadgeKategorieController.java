@@ -4,15 +4,15 @@ import com.example.coastecounter.main.CoasterCount;
 
 public class BadgeKategorieController {
 
-	private Badgekategorie badgekategorie;
+    private Badgekategorie badgekategorie;
 
-	private BadgeKategorieView badgeKategorieView;
+    private BadgeKategorieView badgeKategorieView;
 
 
-	private CoasterCount coasterCount;
+    private CoasterCount coasterCount;
 
-	public void createBadgeCategoryView(Badgekategorie category) {
+    public void createBadgeCategoryView(Badgekategorie category) {
 
-	}
+    }
 
 }

@@ -2,12 +2,12 @@ package com.example.coastecounter.achterbahn;
 
 import com.example.coastecounter.main.CoasterCount;
 
-public class AchterbahnController{
+public class AchterbahnController {
 
-	private Achterbahn achterbahn;
+    private Achterbahn achterbahn;
 
-	private AchterbahnView achterbahnView;
+    private AchterbahnView achterbahnView;
 
-	private CoasterCount coasterCount;
+    private CoasterCount coasterCount;
 
 }

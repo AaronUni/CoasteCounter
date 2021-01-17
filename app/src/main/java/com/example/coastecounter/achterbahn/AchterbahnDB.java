@@ -9,18 +9,18 @@ public class AchterbahnDB {
 
 
     private static Achterbahn colossosHeidePark = new Achterbahn(0, "Colossos - Kampf der Giganten",
-            1344,50, 48.5, 0, "Airtime Hill\nHelix", 1030, 5, 2,
-            "Intamin","13-04-2001",
+            1344, 50, 48.5, 0, "Airtime Hill\nHelix", 1030, 5, 2,
+            "Intamin", "13-04-2001",
             "Collosos - Kampf der Giganten steht im Heide Park Resort und ist eine eine Holzachterbahn "
                     + "von Intamin im Out-and-back Layout und wurde zusammen mit Holzbau Cordes im Prefabricated"
-            + " Track verfahren gebaut. Am 19 April 2019 wurde die Bahn nach einem Retrack der Schiene zusammen mit"
-            + " neuer Thematisierung und neuem Soundtrack(IMAScore) wiedereröffnet", "Heide Park Resort",
+                    + " Track verfahren gebaut. Am 19 April 2019 wurde die Bahn nach einem Retrack der Schiene zusammen mit"
+                    + " neuer Thematisierung und neuem Soundtrack(IMAScore) wiedereröffnet", "Heide Park Resort",
             null, "Feuer", "Prefabricated", 110, R.drawable.colossos);
     private static Achterbahn kaernanHansaPark = new Achterbahn(1, "Schwur des Kärnan", 1235,
-            73, 67.0,0, "Vertical Lift\n Heardline Roll", 850, 4, 3,
-            "Gerstlauer", "01-07-2015","Der Schwur des Kärnan steht im Norddeutschen"
+            73, 67.0, 0, "Vertical Lift\n Heardline Roll", 850, 4, 3,
+            "Gerstlauer", "01-07-2015", "Der Schwur des Kärnan steht im Norddeutschen"
             + " Hansapark und ist ein Hypercoaster vom deutschen Hersteller Gerstlauer. Zusammen mit "
-                    + "Silver Star ist Kärnan mit 73m die höchste Achterbahn Deutschlands.", "Hansa Park",
+            + "Silver Star ist Kärnan mit 73m die höchste Achterbahn Deutschlands.", "Hansa Park",
             null, "Mittelalter", "Infinity Coaster, Hyper Coaster",
             127, R.drawable.kaernan);
     private static Achterbahn blueFireEuropapark = new Achterbahn(2, "Blue Fire Megacoaster",
@@ -28,7 +28,7 @@ public class AchterbahnDB {
             "LSM Launch 0-100 2,5sek.\n Twisted Horsehoe Roll\n In-Line Twist, Heardline Roll\n Looping",
             1720, 5, 5, "Mack Rides", "04-04-2009",
             "Blue Fire ist der erste Launch Coaster von Mack Rides. Sie katapultiert die Fahrgäste mit"
-            + " hilfe einem LSM Antriebs von 0-100km/h in 2,5 sek.. ", "Europa Park",
+                    + " hilfe einem LSM Antriebs von 0-100km/h in 2,5 sek.. ", "Europa Park",
             null, "Island", "Lunched Coaster - Mega Coaster",
             100, R.drawable.bluefire);
     private static Achterbahn nessieHansaPark = new Achterbahn(3, "Nessie", 741, 26,
@@ -70,8 +70,7 @@ public class AchterbahnDB {
         for (Achterbahn a : achterbahnList) {
             if (park != null && !park.isEmpty()) {
                 if (a.getPark().equals(park)) out.add(a.getName());
-            }
-            else {
+            } else {
                 out.add(a.getName());
             }
         }
