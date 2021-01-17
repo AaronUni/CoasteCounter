@@ -34,7 +34,7 @@
         android:id="@+id/button_dashboard_parkauswahl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="72dp"
         android:onClick="parkSearch"
         android:text="@string/string_dashboard_parkauswahl"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,53 +46,51 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/string_dashboard_badges"
-        app:layout_constraintBottom_toTopOf="@+id/button_dashboard_achterbahn"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
-        app:layout_constraintVertical_bias="0.895" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <Button
-            android:id="@+id/button_dashboard_achterbahn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="176dp"
-            android:text="@string/string_dashboard_achterbahn"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:onClick="starteSuche"/>
+        android:id="@+id/button_dashboard_achterbahn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="starteSuche"
+        android:text="@string/string_dashboard_achterbahn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_dashboard_badges" />
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="237dp"
-        android:layout_marginBottom="2dp"
+        android:id="@+id/linearLayout"
+        android:layout_width="403dp"
+        android:layout_height="36dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/button_dashboard_badges"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_dashboard_parkauswahl"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/button_dashboard_parkauswahl">
 
         <TextView
             android:id="@+id/textView_dashboard_totalCount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:gravity="end"
             android:text="@string/string_totalCount"
-            android:textSize="18sp"
-            android:textStyle="bold"
             android:textAlignment="textEnd"
-            android:gravity="end" />
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView_dashboard_totalCounterAnzeige"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:padding="5dp"
             android:text="@string/string_counter"
-            android:textSize="18sp"
-            android:padding="5dp"/>
+            android:textSize="18sp" />
     </LinearLayout>
 
 
