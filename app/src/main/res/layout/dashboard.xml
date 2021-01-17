@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main.CoasterCount">
+    tools:context=".dashboard.DashboardView">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/my_toolbar"
@@ -21,7 +21,7 @@
         app:showAsAction="ifRoom" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/Parkname_Dashboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="58dp"
@@ -31,13 +31,13 @@
         tools:textSize="36sp" />
 
     <Button
-        android:id="@+id/button_dashboard_parkauswahl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="58dp"
-        android:text="@string/string_dashboard_parkauswahl"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/my_toolbar" />
+            android:id="@+id/button_dashboard_parkauswahl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="58dp"
+            android:text="@string/string_dashboard_parkauswahl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/my_toolbar" android:onClick="parkSearch"/>
 
     <Button
         android:id="@+id/button_dashboard_badges"
@@ -51,14 +51,14 @@
         app:layout_constraintVertical_bias="0.895" />
 
     <Button
-        android:id="@+id/button_dashboard_achterbahn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="176dp"
-        android:text="@string/string_dashboard_achterbahn"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            android:id="@+id/button_dashboard_achterbahn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="176dp"
+            android:text="@string/string_dashboard_achterbahn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:onClick="starteSuche"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

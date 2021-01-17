@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import com.example.coastecounter.R;
 import com.example.coastecounter.dashboard.DashboardView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class AchterbahnView extends AppCompatActivity {
 
@@ -27,31 +26,13 @@ public class AchterbahnView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.achterbahnanzeigen);
-        Toolbar myToolbar = findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setUpToolbar();
         ImageView img = (ImageView) findViewById(R.id.imageView_achterbahnanzeigen);
         img.setImageResource(R.drawable.coastercounterlogo);
         Bundle b = getIntent().getExtras();
         if (b != null) pos = b.getString("id");
-        myToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(AchterbahnView.this, DashboardView.class);
-                startActivity(intent);
-            }
-        });
         AchterbahnDB achterbahnDB = new AchterbahnDB();
         achterbahnLaden(achterbahnDB.getByName(pos));
-        FloatingActionButton bCount = findViewById(R.id.button_achterbahnanzeigen_count);
-        bCount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                count += 1;
-                TextView counter = findViewById(R.id.textView_counter);
-                counter.setText(String.valueOf(count));
-            }
-        });
     }
 
     @Override
@@ -99,4 +80,23 @@ public class AchterbahnView extends AppCompatActivity {
         park.setText(String.valueOf(a.getPark()));
     }
 
+    public void count(View view) {
+        count += 1;
+        TextView counter = findViewById(R.id.textView_counter);
+        counter.setText(String.valueOf(count));
+    }
+
+    public void setUpToolbar() {
+        Toolbar myToolbar = findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+        setTitle("");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        myToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AchterbahnView.this, DashboardView.class);
+                startActivity(intent);
+            }
+        });
+    }
 }

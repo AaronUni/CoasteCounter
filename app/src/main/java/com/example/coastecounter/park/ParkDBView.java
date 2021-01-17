@@ -1,4 +1,4 @@
-package com.example.coastecounter.suche;
+package com.example.coastecounter.park;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,21 +11,20 @@ import android.widget.SearchView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import com.example.coastecounter.R;
-import com.example.coastecounter.achterbahn.AchterbahnDB;
-import com.example.coastecounter.achterbahn.AchterbahnView;
 import com.example.coastecounter.dashboard.DashboardView;
 
 import java.util.ArrayList;
 
-public class AchterbahnSucheView extends AppCompatActivity {
+public class ParkDBView extends AppCompatActivity {
+
     ArrayList<String> myList;
     ArrayAdapter adapter;
     SearchView searchView;
 
-
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.achterbahnsuchen);
+        setContentView(R.layout.activity_park_d_b_view);
         setUpToolbar();
         initializeSearch();
     }
@@ -40,24 +39,24 @@ public class AchterbahnSucheView extends AppCompatActivity {
     private void setUpToolbar() {
         Toolbar myToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
-        setTitle(R.string.string_achterbahnsuchen);
+        setTitle(R.string.string_parkauswahl);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); //BackPfeil
         myToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(AchterbahnSucheView.this, DashboardView.class);
+                Intent intent = new Intent(ParkDBView.this, DashboardView.class);
                 startActivity(intent);
             }
         });
     }
 
     private void initializeSearch() {
-        AchterbahnDB achterbahnDB = new AchterbahnDB();
-        myList = achterbahnDB.getListByName();
+        ParkDB parkDB = new ParkDB();
+        myList = parkDB.getListByName();
         adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, myList);
-        final ListView listView = findViewById(R.id.listview_achterbahnsuche);
+        ListView listView = findViewById(R.id.listview_parksuchen);
         listView.setAdapter(adapter);
-        searchView = findViewById(R.id.searchview_achterbahnsuchen);
+        searchView = findViewById(R.id.searchview_parkSuchen);
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -74,9 +73,9 @@ public class AchterbahnSucheView extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(AchterbahnSucheView.this, AchterbahnView.class);
+                Intent intent = new Intent(ParkDBView.this, DashboardView.class);
                 Bundle b = new Bundle();
-                b.putString("id", (String) parent.getItemAtPosition(position));
+                b.putString("Parkname", (String) parent.getItemAtPosition(position));
                 intent.putExtras(b);
                 startActivity(intent);
             }

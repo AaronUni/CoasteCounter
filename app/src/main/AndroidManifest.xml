@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    package="com.example.coastecounter">
+    package="com.example.coastecounter" >
 
     <application
         android:allowBackup="true"
@@ -9,8 +9,10 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/rcc_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".main.CoasterCount">
+        android:theme="@style/AppTheme" >
+        <activity android:name=".park.ParkDBView" >
+        </activity>
+        <activity android:name=".main.CoasterCount" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,8 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".suche.AchterbahnSucheView" />
-        <activity android:name=".achterbahn.AchterbahnView"/>
-        <activity android:name=".dashboard.DashboardView"/>
+        <activity android:name=".achterbahn.AchterbahnView" />
+        <activity android:name=".dashboard.DashboardView" />
     </application>
 
 </manifest>

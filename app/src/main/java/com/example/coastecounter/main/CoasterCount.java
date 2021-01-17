@@ -41,5 +41,4 @@ public class CoasterCount extends AppCompatActivity {
         Intent intent = new Intent(CoasterCount.this, DashboardView.class);
         startActivity(intent);
     }
-
 }

@@ -16,6 +16,7 @@
     <string name="action_navigation_abmelden">Abmelden</string>
     <string name="string_achterbahnanzeigen_name">Achterbahnname</string>
     <string name="string_achterbahnsuchen">Achterbahn suchen</string>
+    <string name="string_parkauswahl">Park suchen</string>
     <string name="string_searchFail">Item not found</string>
     <string name="string_na">N/A</string>
     <string name="bisher_gefahren">Bisher gefahren:</string>

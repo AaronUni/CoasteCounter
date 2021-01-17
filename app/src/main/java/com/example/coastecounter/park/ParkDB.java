@@ -1,6 +1,7 @@
 package com.example.coastecounter.park;
 
 import com.example.coastecounter.achterbahn.AchterbahnDB;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -66,6 +67,14 @@ public class ParkDB {
             }
         }
         return result;
+    }
+
+    public ArrayList<String> getListByName() {
+        ArrayList<String> out = new ArrayList<String>();
+        for (Park p : parkList) {
+            out.add(p.getName());
+        }
+        return out;
     }
 
 }
