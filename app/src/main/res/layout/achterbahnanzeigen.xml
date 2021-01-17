@@ -77,19 +77,19 @@
                     />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:id="@+id/button_achterbahnanzeigen_count"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="0.5"
+                        android:id="@+id/button_achterbahnanzeigen_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.5"
 
-                    android:clickable="true"
-                    android:src="@android:drawable/ic_input_add"
-                    app:backgroundTint="@color/colorPrimary"
-                    android:paddingEnd="15dp"
-                    android:paddingRight="15dp"
-                    tools:ignore="RtlSymmetry"
-                    android:focusable="true" />
+                        android:clickable="true"
+                        android:src="@android:drawable/ic_input_add"
+                        app:backgroundTint="@color/colorPrimary"
+                        android:paddingEnd="15dp"
+                        android:paddingRight="15dp"
+                        tools:ignore="RtlSymmetry"
+                        android:focusable="true" android:onClick="count"/>
 
             </LinearLayout>
 
