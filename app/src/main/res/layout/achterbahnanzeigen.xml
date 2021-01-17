@@ -20,13 +20,14 @@
         app:showAsAction="ifRoom" />
 
     <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="679dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="4dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        android:fillViewport="true"
         app:layout_constraintTop_toBottomOf="@+id/my_toolbar">
 
         <LinearLayout
@@ -38,21 +39,21 @@
                 android:id="@+id/text_achterbahnanzeigen_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
                 android:text="@string/string_achterbahnanzeigen_name"
-                android:textSize="36sp"
                 android:textAlignment="center"
-                android:gravity="center_horizontal" />
+                android:textSize="36sp" />
 
             <ImageView
                 android:id="@+id/imageView_achterbahnanzeigen"
                 android:layout_width="match_parent"
                 android:layout_height="154dp"
-                android:paddingLeft="32dp"
-                android:paddingRight="32dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                tools:srcCompat="@tools:sample/avatars"
-                android:contentDescription="@string/bild_von_der_bahn" />
+                android:contentDescription="@string/bild_von_der_bahn"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                tools:srcCompat="@tools:sample/avatars" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -73,32 +74,32 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:text="@string/string_na"
-                    />
+                    android:text="@string/string_na" />
 
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:id="@+id/button_achterbahnanzeigen_count"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_weight="0.5"
+                    android:id="@+id/button_achterbahnanzeigen_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
 
-                        android:clickable="true"
-                        android:src="@android:drawable/ic_input_add"
-                        app:backgroundTint="@color/colorPrimary"
-                        android:paddingEnd="15dp"
-                        android:paddingRight="15dp"
-                        tools:ignore="RtlSymmetry"
-                        android:focusable="true" android:onClick="count"/>
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="count"
+                    android:paddingEnd="15dp"
+                    android:paddingRight="15dp"
+                    android:src="@android:drawable/ic_input_add"
+                    app:backgroundTint="@color/colorPrimary"
+                    tools:ignore="RtlSymmetry" />
 
             </LinearLayout>
 
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:stretchColumns="*"
                 android:paddingLeft="3dp"
-                android:paddingRight="3dp">
+                android:paddingRight="3dp"
+                android:stretchColumns="*">
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -111,32 +112,32 @@
                         android:id="@+id/textView19"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:text="@string/laenge" />
+                        android:text="@string/laenge"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/text_achterbahnanzeigen_laenge"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/string_na"
                         android:gravity="right"
-                        android:paddingRight="10dp"
                         android:paddingEnd="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/string_na"
                         tools:ignore="RtlHardcoded,RtlSymmetry" />
 
                     <TextView
                         android:id="@+id/textView17"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:text="@string/hoehe" />
+                        android:text="@string/hoehe"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/text_achterbahnanzeigen_hoehe"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/string_na"
                         android:gravity="right"
+                        android:text="@string/string_na"
                         tools:ignore="RtlHardcoded" />
                 </TableRow>
 
@@ -149,32 +150,32 @@
                         android:id="@+id/textView20"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:text="@string/abfahrt" />
+                        android:text="@string/abfahrt"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/text_achterbahnanzeigen_abfahrt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/string_na"
                         android:gravity="right"
-                        android:paddingRight="10dp"
                         android:paddingEnd="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/string_na"
                         tools:ignore="RtlHardcoded,RtlSymmetry" />
 
                     <TextView
                         android:id="@+id/textView22"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:text="@string/inversionen" />
+                        android:text="@string/inversionen"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/text_achterbahnanzeigen_inversionen"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/string_na"
                         android:gravity="right"
+                        android:text="@string/string_na"
                         tools:ignore="RtlHardcoded" />
                 </TableRow>
 
@@ -187,31 +188,31 @@
                         android:id="@+id/textView24"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:text="@string/elemente" />
+                        android:text="@string/elemente"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/text_achterbahnanzeigen_elemente"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/string_na"
                         android:gravity="right"
                         android:paddingRight="10dp"
+                        android:text="@string/string_na"
                         tools:ignore="RtlHardcoded,RtlSymmetry" />
 
                     <TextView
                         android:id="@+id/textView26"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:text="@string/kapazitaet" />
+                        android:text="@string/kapazitaet"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/text_achterbahnanzeigen_kapazitaet"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/string_na"
                         android:gravity="right"
+                        android:text="@string/string_na"
                         tools:ignore="RtlHardcoded" />
                 </TableRow>
 
@@ -224,31 +225,31 @@
                         android:id="@+id/textView28"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:text="@string/wagen" />
+                        android:text="@string/wagen"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/text_achterbahnanzeigen_wagen"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/string_na"
                         android:gravity="right"
                         android:paddingRight="10dp"
+                        android:text="@string/string_na"
                         tools:ignore="RtlHardcoded,RtlSymmetry" />
 
                     <TextView
                         android:id="@+id/textView30"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:text="@string/zuege" />
+                        android:text="@string/zuege"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/text_achterbahnanzeigen_zuege"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/string_na"
                         android:gravity="right"
+                        android:text="@string/string_na"
                         tools:ignore="RtlHardcoded" />
                 </TableRow>
 
@@ -261,32 +262,32 @@
                         android:id="@+id/textView32"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:text="@string/baujahr" />
+                        android:text="@string/baujahr"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/text_achterbahnanzeigen_baujahr"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/string_na"
-                        android:paddingRight="10dp"
                         android:gravity="right"
                         android:paddingEnd="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/string_na"
                         tools:ignore="RtlHardcoded,RtlSymmetry" />
 
                     <TextView
                         android:id="@+id/textView33"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:text="@string/park" />
+                        android:text="@string/park"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/text_achterbahnanzeigen_park"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/string_na"
                         android:gravity="right"
+                        android:text="@string/string_na"
                         tools:ignore="RtlHardcoded" />
                 </TableRow>
             </TableLayout>
@@ -294,10 +295,9 @@
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:stretchColumns="*"
                 android:paddingLeft="3dp"
-                android:paddingRight="3dp">
-
+                android:paddingRight="3dp"
+                android:stretchColumns="*">
 
 
                 <TableRow
@@ -308,15 +308,15 @@
                         android:id="@+id/textView34"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:text="@string/erbauer" />
+                        android:text="@string/erbauer"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/text_achterbahnanzeigen_erbauer"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/string_na"
                         android:gravity="right"
+                        android:text="@string/string_na"
                         tools:ignore="RtlHardcoded" />
                 </TableRow>
 
@@ -328,15 +328,15 @@
                         android:id="@+id/textView36"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:text="@string/theme" />
+                        android:text="@string/theme"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/text_achterbahnanzeigen_theme"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/string_na"
                         android:gravity="right"
+                        android:text="@string/string_na"
                         tools:ignore="RtlHardcoded" />
                 </TableRow>
 
@@ -355,8 +355,8 @@
                         android:id="@+id/text_achterbahnanzeigen_geschwindigkeit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/string_na"
                         android:gravity="right"
+                        android:text="@string/string_na"
                         tools:ignore="RtlHardcoded" />
                 </TableRow>
 
@@ -368,15 +368,15 @@
                         android:id="@+id/textView40"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:text="@string/bewertung" />
+                        android:text="@string/bewertung"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/text_achterbahnanzeigen_bewertung"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/string_na"
                         android:gravity="right"
+                        android:text="@string/string_na"
                         tools:ignore="RtlHardcoded" />
                 </TableRow>
             </TableLayout>
@@ -387,17 +387,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                android:textStyle="bold"
                 android:text="@string/kurzbeschreibung"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/text_achterbahnanzeigen_kurzbeschreibung"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/string_na"
                 android:paddingLeft="10dp"
-                android:paddingRight="10dp" />
+                android:paddingRight="10dp"
+                android:text="@string/string_na" />
 
         </LinearLayout>
 
