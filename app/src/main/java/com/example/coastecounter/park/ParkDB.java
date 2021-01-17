@@ -18,7 +18,7 @@ public class ParkDB {
             null, 1400000, 46,
             "Deutschlands einziger Erlebnispark am Meer liegt in der Lübecker Bucht", "www.hansapark.de",new ArrayList<Achterbahn>()
             , null, "Hanse", "Christoph Andreas Leicht");
-    Park europaPark = new Park(3, "Europa-Park", "info@europapark.de",
+    Park europaPark = new Park(3, "Europa Park", "info@europapark.de",
             "Europa-Park-Straße 2, \n77977 Rust", "07822 77-6688",
             "07822 77-11605", null, 5800000, 95,
             "Europpark liegt in Rust(Baden-Württemberg) und ist mit rund 5,8 Millionen Besuchern(2019)"
