@@ -9,6 +9,7 @@
       <item name="titleTextColor">@color/TitleColor</item>
       <item name="android:textColorPrimary">@color/TitleColor</item>
       <item name="android:textColor">@color/colorPrimary</item>
+      <item name="android:editTextColor">@color/colorPrimary</item>
 
 
 
