@@ -6,16 +6,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AchterbahnDB {
-
-
     private static Achterbahn colossosHeidePark = new Achterbahn(0, "Colossos - Kampf der Giganten",
             1344, 50, 48.5, 0, "Airtime Hill\nHelix", 1030, 5, 2,
             "Intamin", "13-04-2001",
             "Collosos - Kampf der Giganten steht im Heide Park Resort und ist eine eine Holzachterbahn "
                     + "von Intamin im Out-and-back Layout und wurde zusammen mit Holzbau Cordes im Prefabricated"
-                    + " Track verfahren gebaut. Am 19 April 2019 wurde die Bahn nach einem Retrack der Schiene zusammen mit"
-                    + " neuer Thematisierung und neuem Soundtrack(IMAScore) wiedereröffnet", "Heide Park Resort",
-            null, "Feuer", "Prefabricated", 110, R.drawable.colossos);
+                    + " Track verfahren gebaut. Am 19 April 2019 wurde die Bahn nach einem Retrack der Schiene"
+            + " zusammen mit neuer Thematisierung und neuem Soundtrack(IMAScore) wiedereröffnet",
+            "Heide Park Resort",null, "Feuer", "Prefabricated",
+            110, R.drawable.colossos);
     private static Achterbahn kaernanHansaPark = new Achterbahn(1, "Schwur des Kärnan", 1235,
             73, 67.0, 0, "Vertical Lift\n Heardline Roll", 850, 4, 3,
             "Gerstlauer", "01-07-2015", "Der Schwur des Kärnan steht im Norddeutschen"
