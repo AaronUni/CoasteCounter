@@ -373,16 +373,17 @@
                         android:layout_height="wrap_content"
                         android:text="@string/bewertung"
                         android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/text_achterbahnanzeigen_bewertung"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="right"
-                        android:text="@string/string_na"
-                        tools:ignore="RtlHardcoded" />
                 </TableRow>
             </TableLayout>
+            <RatingBar
+                android:id="@+id/ratingBar_achterbahnanzeigen"
+                style="?android:attr/ratingBarStyleIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:rating="1"
+                android:layout_gravity="right"
+                tools:ignore="RtlHardcoded" />
 
 
             <TextView
