@@ -94,6 +94,8 @@ public class AchterbahnView extends AppCompatActivity {
         picture.setImageResource(a.getImage());
         TextView counter = findViewById(R.id.textView_counter);
         counter.setText(String.valueOf(count));
+        TextView park = findViewById(R.id.text_achterbahnanzeigen_park);
+        park.setText(String.valueOf(a.getPark()));
     }
 
 }

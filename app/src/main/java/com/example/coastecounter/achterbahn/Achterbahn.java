@@ -35,7 +35,7 @@ public class Achterbahn {
 
     private int image;
 
-    private Park park;
+    private String park;
 
 
     private Achterbahnbewertung achterbahnbewertung;
@@ -183,6 +183,10 @@ public class Achterbahn {
         return image;
     }
 
+    public String getPark() {
+        return park;
+    }
+
     /**
  * XML
     public String getImage() {
@@ -196,7 +200,7 @@ public class Achterbahn {
 */
     public Achterbahn(int coasterID, String name, double length, double height, double descent, int inversions,
                       String elements, int capacity, int cars, int trains, String manufacturer, String constructed,
-                      String description, Park park, Achterbahnbewertung achterbahnbewertung, String theme, String type, int speed, int image) {
+                      String description, String park, Achterbahnbewertung achterbahnbewertung, String theme, String type, int speed, int image) {
         this.coasterID = coasterID;
         this.name = name;
         this.length = length;

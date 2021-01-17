@@ -236,18 +236,11 @@
                         android:text="@string/string_na"
                         android:gravity="right" />
                 </TableRow>
-            </TableLayout>
-
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:stretchColumns="*"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp">
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:paddingBottom="3dp">
 
                     <TextView
                         android:id="@+id/textView32"
@@ -261,8 +254,33 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/string_na"
+                        android:paddingRight="10dp"
+                        android:gravity="right" />
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="Park:" />
+
+                    <TextView
+                        android:id="@+id/text_achterbahnanzeigen_park"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/string_na"
                         android:gravity="right" />
                 </TableRow>
+            </TableLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp">
+
+
 
                 <TableRow
                     android:layout_width="match_parent"
