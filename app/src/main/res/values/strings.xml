@@ -36,4 +36,6 @@
     <string name="geschwindigkeit">Geschwindigkeit:</string>
     <string name="bewertung">Bewertung:</string>
     <string name="kurzbeschreibung">Kurzbeschreibung:</string>
+    <string name="string_totalCount">Total Count:</string>
+    <string name="string_counter">0</string>
 </resources>

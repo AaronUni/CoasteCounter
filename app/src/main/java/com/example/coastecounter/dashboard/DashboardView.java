@@ -29,6 +29,7 @@ public class DashboardView extends AppCompatActivity{
         if (bundle != null) name = bundle.getString("Parkname");
         TextView park = findViewById(R.id.Parkname_Dashboard);
         park.setText(name);
+        park.setTextSize(32);
     }
 
     @Override
