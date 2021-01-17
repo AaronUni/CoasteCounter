@@ -22,7 +22,7 @@
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="0dp"
         android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,7 +58,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="10dp">
 
                 <TextView
                     android:id="@+id/textView3"
@@ -97,8 +98,8 @@
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
                 android:stretchColumns="*">
 
                 <TableRow
@@ -185,17 +186,18 @@
                     android:paddingBottom="3dp">
 
                     <TextView
-                        android:id="@+id/textView24"
+                        android:id="@+id/textView38"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/elemente"
+                        android:text="@string/geschwindigkeit"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/text_achterbahnanzeigen_elemente"
+                        android:id="@+id/text_achterbahnanzeigen_geschwindigkeit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="right"
+                        android:paddingEnd="10dp"
                         android:paddingRight="10dp"
                         android:text="@string/string_na"
                         tools:ignore="RtlHardcoded,RtlSymmetry" />
@@ -295,8 +297,8 @@
             <TableLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="3dp"
-                android:paddingRight="3dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
                 android:stretchColumns="*">
 
 
@@ -345,19 +347,20 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:id="@+id/textView38"
+                        android:id="@+id/textView24"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/geschwindigkeit"
+                        android:text="@string/elemente"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/text_achterbahnanzeigen_geschwindigkeit"
+                        android:id="@+id/text_achterbahnanzeigen_elemente"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="right"
                         android:text="@string/string_na"
                         tools:ignore="RtlHardcoded" />
+
                 </TableRow>
 
                 <TableRow
