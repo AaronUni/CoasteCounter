@@ -1,11 +1,14 @@
 package com.example.coastecounter.achterbahn;
 
 import com.example.coastecounter.R;
+import com.example.coastecounter.park.Park;
+import com.example.coastecounter.park.ParkDB;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class AchterbahnDB {
+
 
     private static Achterbahn colossosHeidePark = new Achterbahn(0, "Colossos - Kampf der Giganten",
             1344,50, 48.5, 0, "Airtime Hill\nHelix", 1030, 5, 2,
@@ -13,7 +16,7 @@ public class AchterbahnDB {
             "Collosos - Kampf der Giganten steht im Heide Park Resort und ist eine eine Holzachterbahn "
                     + "von Intamin im Out-and-back Layout und wurde zusammen mit Holzbau Cordes im Prefabricated"
             + " Track verfahren gebaut. Am 19 April 2019 wurde die Bahn nach einem Retrack der Schiene zusammen mit"
-            + " neuer Thematisierung und neuem Soundtrack(IMAScore) wiedereröffnet", "Heidepark",
+            + " neuer Thematisierung und neuem Soundtrack(IMAScore) wiedereröffnet", "HeidePark",
             null, "Feuer", "Prefabricated", 110, R.drawable.colossos);
     private static Achterbahn kaernanHansaPark = new Achterbahn(1, "Schwur des Kärnan", 1235,
             73, 67.0,0, "Vertical Lift\n Heardline Roll", 850, 4, 3,
@@ -39,10 +42,10 @@ public class AchterbahnDB {
 
     public AchterbahnDB() {
 
-        this.achterbahnList.add(colossosHeidePark);
-        this.achterbahnList.add(kaernanHansaPark);
-        this.achterbahnList.add(blueFireEuropapark);
-        this.achterbahnList.add(nessieHansaPark);
+        achterbahnList.add(colossosHeidePark);
+        achterbahnList.add(kaernanHansaPark);
+        achterbahnList.add(blueFireEuropapark);
+        achterbahnList.add(nessieHansaPark);
     }
 
     public void add(Achterbahn bahn) {
