@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import com.example.coastecounter.R;
 import com.example.coastecounter.achterbahn.AchterbahnController;
-import com.example.coastecounter.park.ParkDBView;
+import com.example.coastecounter.park.ParkSuchenView;
 import com.example.coastecounter.suche.AchterbahnSucheView;
 
 public class DashboardView extends AppCompatActivity{
@@ -74,7 +74,7 @@ public class DashboardView extends AppCompatActivity{
     }
 
     public void parkSearch(View view) {
-        Intent intent = new Intent(this, ParkDBView.class);
+        Intent intent = new Intent(this, ParkSuchenView.class);
         Bundle b = new Bundle();
         b.putBooleanArray("ridden", ridden);
         b.putIntArray("countSingle", countSingle);

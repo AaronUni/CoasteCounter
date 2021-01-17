@@ -104,7 +104,8 @@ public class AchterbahnView extends AppCompatActivity {
                     rides[achterbahnDB.getByName(b.getString("id")).getCoasterID()] = count;
                     b.remove("countSingle");
                     b.putIntArray("countSingle", rides);
-                    if(!((boolean[])b.get("ridden"))[achterbahnDB.getByName(b.getString("id")).getCoasterID()]) {
+                    if (count > 0 && !((boolean[])b.get("ridden"))
+                            [achterbahnDB.getByName(b.getString("id")).getCoasterID()]) {
                         ((boolean[])b.get("ridden"))[achterbahnDB.getByName(b.getString("id")).getCoasterID()] = true;
                         int i = (int) b.get("count") + 1;
                         b.remove("count");
