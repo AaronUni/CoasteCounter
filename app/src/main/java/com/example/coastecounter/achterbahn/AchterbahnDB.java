@@ -1,8 +1,6 @@
 package com.example.coastecounter.achterbahn;
 
 import com.example.coastecounter.R;
-import com.example.coastecounter.park.Park;
-import com.example.coastecounter.park.ParkDB;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -67,10 +65,15 @@ public class AchterbahnDB {
         return result;
     }
 
-    public ArrayList<String> getListByName() {
+    public ArrayList<String> getListByName(String park) {
         ArrayList<String> out = new ArrayList<String>();
         for (Achterbahn a : achterbahnList) {
-            out.add(a.getName());
+            if (park != null && !park.isEmpty()) {
+                if (a.getPark().equals(park)) out.add(a.getName());
+            }
+            else {
+                out.add(a.getName());
+            }
         }
         return out;
     }

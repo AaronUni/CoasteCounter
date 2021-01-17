@@ -19,6 +19,8 @@ public class AchterbahnView extends AppCompatActivity {
 
     private int count = 0;
 
+    private AchterbahnDB achterbahnDB = new AchterbahnDB();
+
     public void openCoasterFrame() {
 
     }
@@ -30,9 +32,10 @@ public class AchterbahnView extends AppCompatActivity {
         ImageView img = (ImageView) findViewById(R.id.imageView_achterbahnanzeigen);
         img.setImageResource(R.drawable.coastercounterlogo);
         Bundle b = getIntent().getExtras();
-        if (b != null) pos = b.getString("id");
-        AchterbahnDB achterbahnDB = new AchterbahnDB();
-        achterbahnLaden(achterbahnDB.getByName(pos));
+        if (b != null) {
+            count = ((int[]) b.get("countSingle"))[achterbahnDB.getByName(b.getString("id")).getCoasterID()];
+            achterbahnLaden(achterbahnDB.getByName(b.getString("id")));
+        }
     }
 
     @Override
@@ -95,6 +98,20 @@ public class AchterbahnView extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AchterbahnView.this, DashboardView.class);
+                Bundle b = getIntent().getExtras();
+                if (b != null) {
+                    int[] rides = (int[]) b.get("countSingle");
+                    rides[achterbahnDB.getByName(b.getString("id")).getCoasterID()] = count;
+                    b.remove("countSingle");
+                    b.putIntArray("countSingle", rides);
+                    if(!((boolean[])b.get("ridden"))[achterbahnDB.getByName(b.getString("id")).getCoasterID()]) {
+                        ((boolean[])b.get("ridden"))[achterbahnDB.getByName(b.getString("id")).getCoasterID()] = true;
+                        int i = (int) b.get("count") + 1;
+                        b.remove("count");
+                        b.putInt("count", i);
+                    }
+                }
+                intent.putExtras(b);
                 startActivity(intent);
             }
         });

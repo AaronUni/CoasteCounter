@@ -46,6 +46,8 @@ public class AchterbahnSucheView extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AchterbahnSucheView.this, DashboardView.class);
+                Bundle b = getIntent().getExtras();
+                intent.putExtras(b);
                 startActivity(intent);
             }
         });
@@ -53,7 +55,7 @@ public class AchterbahnSucheView extends AppCompatActivity {
 
     private void initializeSearch() {
         AchterbahnDB achterbahnDB = new AchterbahnDB();
-        myList = achterbahnDB.getListByName();
+        myList = achterbahnDB.getListByName((String) getIntent().getExtras().get("Parkname"));
         adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, myList);
         final ListView listView = findViewById(R.id.listview_achterbahnsuche);
         listView.setAdapter(adapter);
@@ -75,7 +77,7 @@ public class AchterbahnSucheView extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(AchterbahnSucheView.this, AchterbahnView.class);
-                Bundle b = new Bundle();
+                Bundle b = getIntent().getExtras();
                 b.putString("id", (String) parent.getItemAtPosition(position));
                 intent.putExtras(b);
                 startActivity(intent);

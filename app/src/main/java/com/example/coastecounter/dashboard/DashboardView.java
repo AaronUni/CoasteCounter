@@ -26,10 +26,17 @@ public class DashboardView extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dashboard);
         initialise();
-        if (bundle != null) name = bundle.getString("Parkname");
+        if (bundle != null) {
+            name = bundle.getString("Parkname");
+            ridden = (boolean[]) bundle.get("ridden");
+            countSingle = (int[]) bundle.get("countSingle");
+            count = (int) bundle.get("count");
+        }
         TextView park = findViewById(R.id.Parkname_Dashboard);
         park.setText(name);
         park.setTextSize(32);
+        TextView counted = findViewById(R.id.textView_dashboard_totalCounterAnzeige);
+        counted.setText(String.valueOf(count));
     }
 
     @Override
@@ -57,11 +64,23 @@ public class DashboardView extends AppCompatActivity{
 
     public void starteSuche(View view) {
         Intent intent = new Intent(this, AchterbahnSucheView.class);
+        Bundle b = new Bundle();
+        b.putBooleanArray("ridden", ridden);
+        b.putIntArray("countSingle", countSingle);
+        b.putInt("count", count);
+        b.putString("Parkname", name);
+        intent.putExtras(b);
         startActivity(intent);
     }
 
     public void parkSearch(View view) {
         Intent intent = new Intent(this, ParkDBView.class);
+        Bundle b = new Bundle();
+        b.putBooleanArray("ridden", ridden);
+        b.putIntArray("countSingle", countSingle);
+        b.putInt("count", count);
+        b.putString("Parkname", name);
+        intent.putExtras(b);
         startActivity(intent);
     }
 

@@ -45,6 +45,8 @@ public class ParkDBView extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ParkDBView.this, DashboardView.class);
+                Bundle b = getIntent().getExtras();
+                intent.putExtras(b);
                 startActivity(intent);
             }
         });
@@ -74,7 +76,7 @@ public class ParkDBView extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(ParkDBView.this, DashboardView.class);
-                Bundle b = new Bundle();
+                Bundle b = getIntent().getExtras();
                 b.putString("Parkname", (String) parent.getItemAtPosition(position));
                 intent.putExtras(b);
                 startActivity(intent);
