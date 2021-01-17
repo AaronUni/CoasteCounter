@@ -18,4 +18,21 @@
     <string name="string_achterbahnsuchen">Achterbahn suchen</string>
     <string name="string_searchFail">Item not found</string>
     <string name="string_na">N/A</string>
+    <string name="bisher_gefahren">Bisher gefahren:</string>
+    <string name="bild_von_der_bahn">Bild von der Bahn</string>
+    <string name="laenge">Länge:</string>
+    <string name="hoehe">Höhe:</string>
+    <string name="abfahrt">Abfahrt:</string>
+    <string name="inversionen">Inversionen:</string>
+    <string name="elemente">Elemente:</string>
+    <string name="kapazitaet">Kapazität:</string>
+    <string name="wagen">Wagen:</string>
+    <string name="zuege">Züge:</string>
+    <string name="baujahr">Baujahr:</string>
+    <string name="park">Park:</string>
+    <string name="erbauer">Erbauer:</string>
+    <string name="theme">Theme:</string>
+    <string name="geschwindigkeit">Geschwindigkeit:</string>
+    <string name="bewertung">Bewertung:</string>
+    <string name="kurzbeschreibung">Kurzbeschreibung:</string>
 </resources>

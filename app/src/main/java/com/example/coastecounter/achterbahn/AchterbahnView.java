@@ -62,6 +62,7 @@ public class AchterbahnView extends AppCompatActivity {
     }
 
     private void achterbahnLaden(Achterbahn a) {
+
         TextView name = findViewById(R.id.text_achterbahnanzeigen_name);
         name.setText(a.getName());
         TextView length = findViewById(R.id.text_achterbahnanzeigen_laenge);
