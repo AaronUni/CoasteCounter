@@ -15,7 +15,7 @@ import com.example.coastecounter.dashboard.DashboardView;
 
 import java.util.ArrayList;
 
-public class ParkDBView extends AppCompatActivity {
+public class ParkSuchenView extends AppCompatActivity {
 
     ArrayList<String> myList;
     ArrayAdapter adapter;
@@ -24,7 +24,7 @@ public class ParkDBView extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_park_d_b_view);
+        setContentView(R.layout.parksuchen);
         setUpToolbar();
         initializeSearch();
     }
@@ -44,7 +44,7 @@ public class ParkDBView extends AppCompatActivity {
         myToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ParkDBView.this, DashboardView.class);
+                Intent intent = new Intent(ParkSuchenView.this, DashboardView.class);
                 Bundle b = getIntent().getExtras();
                 intent.putExtras(b);
                 startActivity(intent);
@@ -75,7 +75,7 @@ public class ParkDBView extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(ParkDBView.this, DashboardView.class);
+                Intent intent = new Intent(ParkSuchenView.this, DashboardView.class);
                 Bundle b = getIntent().getExtras();
                 b.putString("Parkname", (String) parent.getItemAtPosition(position));
                 intent.putExtras(b);
