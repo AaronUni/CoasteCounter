@@ -1,7 +1,5 @@
 package com.example.coastecounter.park;
 
-import com.example.coastecounter.achterbahn.AchterbahnDB;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,15 +26,18 @@ public class ParkDB {
 
     private List<Park> parkList = new ArrayList<Park>();
 
-    public ParkDB() {
-        AchterbahnDB achterbahnDB = new AchterbahnDB();
+    public ParkDB() {               //TODO
+        /*AchterbahnDB achterbahnDB = new AchterbahnDB();
         heidePark.addAchterbahn(achterbahnDB.getById(0));
         this.parkList.add(heidePark);
         hansaPark.addAchterbahn(achterbahnDB.getById(1));
         this.parkList.add(hansaPark);
         europaPark.addAchterbahn(achterbahnDB.getById(2));
         this.parkList.add(europaPark);
-        hansaPark.addAchterbahn(achterbahnDB.getById(3));
+        hansaPark.addAchterbahn(achterbahnDB.getById(3));*/
+        parkList.add(heidePark);
+        parkList.add(hansaPark);
+        parkList.add(europaPark);
     }
 
     public void add(Park park) {
