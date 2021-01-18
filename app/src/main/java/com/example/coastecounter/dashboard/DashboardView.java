@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import com.example.coastecounter.R;
@@ -33,6 +35,8 @@ public class DashboardView extends AppCompatActivity{
             countSingle = (int[]) bundle.get("countSingle");
             countParks = (int[]) bundle.get("countParks");
             count = (int) bundle.get("count");
+            ImageView imageView = findViewById(R.id.image_dashboard_logo);
+            imageView.setVisibility(4);
         }
         TextView park = findViewById(R.id.Parkname_Dashboard);
         park.setText(name); //setzt ausgewählten Parknamen
