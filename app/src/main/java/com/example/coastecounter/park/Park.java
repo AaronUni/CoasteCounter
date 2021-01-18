@@ -19,7 +19,7 @@ public class Park {
 
     private String fax;
 
-    private String image;
+    private int image;
 
     private int maxGuests;
 
@@ -33,11 +33,12 @@ public class Park {
 
     private Parkbewertung parkbewertung;
 
+
     private String theme;
 
     private String owner;
 
-    public Park(int parkID, String name, String email, String address, String telephone, String fax, String image, int maxGuests,
+    public Park(int parkID, String name, String email, String address, String telephone, String fax, int image, int maxGuests,
                 int surfaceArea, String description, String website, List<Achterbahn> achterbahnen,
                 Parkbewertung parkbewertung, String theme,
                 String owner) {
@@ -107,11 +108,11 @@ public class Park {
         this.fax = fax;
     }
 
-    public String getImage() {
+    public int getImage() {
         return image;
     }
 
-    public void setImage(String image) {
+    public void setImage(int image) {
         this.image = image;
     }
 

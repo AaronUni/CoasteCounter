@@ -11,6 +11,7 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.coastecounter.R;
 import com.example.coastecounter.achterbahn.AchterbahnController;
 import com.example.coastecounter.park.ParkSuchenView;
+import com.example.coastecounter.park.ParkView;
 import com.example.coastecounter.suche.AchterbahnSucheView;
 
 public class DashboardView extends AppCompatActivity{
@@ -75,6 +76,17 @@ public class DashboardView extends AppCompatActivity{
 
     public void parkSearch(View view) {
         Intent intent = new Intent(this, ParkSuchenView.class);
+        Bundle b = new Bundle();
+        b.putBooleanArray("ridden", ridden);
+        b.putIntArray("countSingle", countSingle);
+        b.putInt("count", count);
+        b.putString("Parkname", name);
+        intent.putExtras(b);
+        startActivity(intent);
+    }
+
+    public void parkAnzeigen(View view) {
+        Intent intent = new Intent(this, ParkView.class);
         Bundle b = new Bundle();
         b.putBooleanArray("ridden", ridden);
         b.putIntArray("countSingle", countSingle);

@@ -7,5 +7,6 @@
       <color name="TitleColor">#FFFFFF</color>
       <color name="test">#FF0000</color>
       <color name="black">#000000</color>
+      <color name="ratingStars">#FFEB3B</color>
 
   </resources>

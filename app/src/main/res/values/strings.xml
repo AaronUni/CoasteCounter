@@ -38,4 +38,19 @@
     <string name="kurzbeschreibung">Kurzbeschreibung:</string>
     <string name="string_totalCount">Total Count:</string>
     <string name="string_counter">0</string>
+    <string name="string_parkanzeigen_name">Parkname</string>
+    <string name="string_parkanzeigen_email">E-Mail:</string>
+    <string name="string_parkanzeigen_addresse">Adresse:</string>
+    <string name="string_parkanzeigen_telephone">Telephone:</string>
+    <string name="string_parkanzeigen_fax">Fax:</string>
+    <string name="string_parkanzeigen_besucherzahlen">Besucherzahlen:</string>
+    <string name="string_parkanzeigen_flaeche">Fläche:</string>
+    <string name="string_parkanzeigen_website">Website:</string>
+    <string name="string_parkanzeigen_kurzbeschreibung">Kurzbeschreibung:</string>
+    <string name="string_parkanzeigen_bewertung">Bewertung:</string>
+    <string name="string_parkanzeigen_thema">Thema:</string>
+    <string name="string_parkanzeigen_betreiber">Betreiber:</string>
+    <string name="string_parkanzeigen_bisher_besucht">Bisher besucht</string>
+    <string name="string_parkanzeigen_parklogo">Parklogo</string>
+
 </resources>

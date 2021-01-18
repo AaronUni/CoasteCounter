@@ -1,96 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".dashboard.DashboardView">
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".dashboard.DashboardView"
+                                                   android:hapticFeedbackEnabled="false">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:menu="@menu/navigation"
-        app:showAsAction="ifRoom" />
+            android:id="@+id/my_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:menu="@menu/navigation"
+            app:showAsAction="ifRoom"/>
 
     <TextView
-        android:id="@+id/Parkname_Dashboard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/string_dashboard_parkname"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
-        tools:textSize="36sp" />
+            android:id="@+id/Parkname_Dashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:onClick="parkAnzeigen"
+            android:text="@string/string_dashboard_parkname"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+            tools:textSize="36sp" />
 
     <Button
-        android:id="@+id/button_dashboard_parkauswahl"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:onClick="parkSearch"
-        android:text="@string/string_dashboard_parkauswahl"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Parkname_Dashboard" />
+            android:id="@+id/button_dashboard_parkauswahl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="72dp"
+            android:onClick="parkSearch"
+            android:text="@string/string_dashboard_parkauswahl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Parkname_Dashboard"/>
 
     <Button
-        android:id="@+id/button_dashboard_badges"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/string_dashboard_badges"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+            android:id="@+id/button_dashboard_badges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_dashboard_badges"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"/>
 
     <Button
-        android:id="@+id/button_dashboard_achterbahn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="starteSuche"
-        android:text="@string/string_dashboard_achterbahn"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_dashboard_badges" />
+            android:id="@+id/button_dashboard_achterbahn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="starteSuche"
+            android:text="@string/string_dashboard_achterbahn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_dashboard_badges"/>
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="403dp"
-        android:layout_height="36dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_dashboard_parkauswahl">
+            android:id="@+id/linearLayout"
+            android:layout_width="403dp"
+            android:layout_height="36dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_dashboard_parkauswahl">
 
         <TextView
-            android:id="@+id/textView_dashboard_totalCount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="end"
-            android:text="@string/string_totalCount"
-            android:textAlignment="textEnd"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+                android:id="@+id/textView_dashboard_totalCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/string_totalCount"
+                android:textAlignment="textEnd"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/textView_dashboard_totalCounterAnzeige"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="5dp"
-            android:text="@string/string_counter"
-            android:textSize="18sp" />
+                android:id="@+id/textView_dashboard_totalCounterAnzeige"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:text="@string/string_counter"
+                android:textSize="18sp"/>
     </LinearLayout>
 
 
