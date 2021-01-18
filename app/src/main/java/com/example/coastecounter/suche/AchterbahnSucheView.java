@@ -57,7 +57,7 @@ public class AchterbahnSucheView extends AppCompatActivity {
 
     private void initializeSearch() {
         //erstellt die Suche
-        AchterbahnDB achterbahnDB = new AchterbahnDB(); //lädt Achterbahndatebank
+        AchterbahnDB achterbahnDB = new AchterbahnDB(); //lädt Achterbahndatenbank
         //erzeugt Liste mit den Achterbahnen (des ausgewählten Parks)
         myList = achterbahnDB.getListByName((String) getIntent().getExtras().get("Parkname"));
         //erzeugt ArrayAdapter nach Vorlage für die Liste der Achterbahnen
@@ -68,7 +68,7 @@ public class AchterbahnSucheView extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() { //Aktion bei EIngabe in der Suchleiste
             @Override
             public boolean onQueryTextSubmit(String query) {
-                //bei Enter ändert sich die ListView-Anzeige entsprechend und Suchleiste ist leer
+                //bei Bestätigung ändert sich die ListView-Anzeige entsprechend und der Fokus ist nicht mehr in der Suchleiste
                 searchView.clearFocus();
                 if (myList.contains(query)) adapter.getFilter().filter(query);
                 return false;
@@ -83,7 +83,7 @@ public class AchterbahnSucheView extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {  //Aktion bei Auswahl einer Achterbahn
-                Intent intent = new Intent(AchterbahnSucheView.this, AchterbahnView.class);
+                Intent intent = new Intent(AchterbahnSucheView.this, AchterbahnView.class); //setzt nächste View
                 Bundle b = getIntent().getExtras(); //lädt übergebenes Bundle
                 b.putString("id", (String) parent.getItemAtPosition(position)); //fügt dem Bundle die Info id hinzu
                 intent.putExtras(b);    //übergibt das Bundle
