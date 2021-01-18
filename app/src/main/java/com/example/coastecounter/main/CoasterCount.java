@@ -37,6 +37,7 @@ public class CoasterCount extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //Startpunkt der App, wechselt in die DashboardView
         super.onCreate(savedInstanceState);
         Intent intent = new Intent(CoasterCount.this, DashboardView.class);
         startActivity(intent);

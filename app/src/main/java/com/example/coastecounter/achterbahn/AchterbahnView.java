@@ -18,9 +18,9 @@ public class AchterbahnView extends AppCompatActivity {
 
     private String pos;
 
-    private int count = 0;
+    private int count = 0;  //Gesamtcount der ausgewählten Achterbahn
 
-    private AchterbahnDB achterbahnDB = new AchterbahnDB();
+    private AchterbahnDB achterbahnDB = new AchterbahnDB(); //Achterbahndatenbank
 
     public void openCoasterFrame() {
 
@@ -28,26 +28,27 @@ public class AchterbahnView extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.achterbahnanzeigen);
-        setUpToolbar();
-        ImageView img = (ImageView) findViewById(R.id.imageView_achterbahnanzeigen);
-        img.setImageResource(R.drawable.coastercounterlogo);
-        Bundle b = getIntent().getExtras();
+        setContentView(R.layout.achterbahnanzeigen);    //wechselt zum Achterbahnanzeigen Layout
+        setUpToolbar(); //setzt Toolbar
+        ImageView img = (ImageView) findViewById(R.id.imageView_achterbahnanzeigen); //lädt Default Bild
+        img.setImageResource(R.drawable.coastercounterlogo);    //setzt Default Bild
+        Bundle b = getIntent().getExtras(); //lädt übergebenes Bundle
         if (b != null) {
+            //liest aus dem Bundle die Anzahl der Fahrten für die ausgewählte Achterbahn aus
             count = ((int[]) b.get("countSingle"))[achterbahnDB.getByName(b.getString("id")).getCoasterID()];
-            achterbahnLaden(achterbahnDB.getByName(b.getString("id")));
+            achterbahnLaden(achterbahnDB.getByName(b.getString("id"))); //lädt ausgewählte Achterbahn
         }
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
+        //Öffnet das Menü und befüllt dieses mit Items, wenn welche vorhanden sind
         getMenuInflater().inflate(R.menu.navigation, menu);
         return true;
     }
 
     private void achterbahnLaden(Achterbahn a) {
-
+        //befüllt die TextView's mit Informationen der Achterbahn
         TextView name = findViewById(R.id.text_achterbahnanzeigen_name);
         name.setText(a.getName());
         TextView length = findViewById(R.id.text_achterbahnanzeigen_laenge);
@@ -87,36 +88,41 @@ public class AchterbahnView extends AppCompatActivity {
     }
 
     public void count(View view) {
-        count += 1;
+        //wird in der achterbahnanzeigen.xml aufgerufen, bei OnClick auf button_achterbahnanzeigen_count
+        count += 1; //erhöht count
         TextView counter = findViewById(R.id.textView_counter);
-        counter.setText(String.valueOf(count));
+        counter.setText(String.valueOf(count)); //aktualisiert count Anzeige
     }
 
     public void setUpToolbar() {
+        //erstellt die Toolbar mit passender Überschrift und steuert den Zurück-Pfeil
         Toolbar myToolbar = findViewById(R.id.my_toolbar);
-        setSupportActionBar(myToolbar);
+        setSupportActionBar(myToolbar); //setzt Toolbar
         setTitle("");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);  //setzt Zurück-Pfeil
         myToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(AchterbahnView.this, DashboardView.class);
-                Bundle b = getIntent().getExtras();
+            public void onClick(View v) {   //Aktion bei Drücken des Zurückpfeils
+                Intent intent = new Intent(AchterbahnView.this, DashboardView.class); //setzt nächste View
+                Bundle b = getIntent().getExtras(); //lädt das Bundle
                 if (b != null) {
+                    //aktualisiert die Fahrten der ausgewählten Achterbahn
                     int[] rides = (int[]) b.get("countSingle");
                     rides[achterbahnDB.getByName(b.getString("id")).getCoasterID()] = count;
-                    b.remove("countSingle");
-                    b.putIntArray("countSingle", rides);
+                    b.remove("countSingle"); //entfernt aus dem Bundle Info über gefahrene Achterbahn
+                    b.putIntArray("countSingle", rides); //fügt dem Bundle aktualisierte Info über gefahrene Achterbahn wieder hinzu
                     if (count > 0 && !((boolean[])b.get("ridden"))
                             [achterbahnDB.getByName(b.getString("id")).getCoasterID()]) {
+                        //wenn Achterbahn zum ersten Mal gefahren(ridden ist noch false), wird die Info Count aktualisiert
+                        //und die Info ridden auf true für die ausgewählte Achterbahn gesetzt
                         ((boolean[])b.get("ridden"))[achterbahnDB.getByName(b.getString("id")).getCoasterID()] = true;
-                        int i = (int) b.get("count") + 1;
-                        b.remove("count");
-                        b.putInt("count", i);
+                        int i = (int) b.get("count") + 1; //aktualisiert Count
+                        b.remove("count");  //entfernt die Info Count aus dem Bundle
+                        b.putInt("count", i);   //fügt die aktualisierte Info Count dem undle hinzu
                     }
                 }
-                intent.putExtras(b);
-                startActivity(intent);
+                intent.putExtras(b);    //übergibt das Bundle
+                startActivity(intent);  //Viewwechsel
             }
         });
     }
