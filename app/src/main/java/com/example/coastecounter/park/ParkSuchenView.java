@@ -80,7 +80,7 @@ public class ParkSuchenView extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {  //Aktion bei Auswahl eines Parks
-                Intent intent = new Intent(ParkSuchenView.this, DashboardView.class); //setzt nächste View
+                Intent intent = new Intent(ParkSuchenView.this, ParkView.class); //setzt nächste View
                 Bundle b = getIntent().getExtras(); //lädt übergebenes Bundle
                 b.putString("Parkname", (String) parent.getItemAtPosition(position)); //fügt dem Bundle die Info Parkname hinzu
                 intent.putExtras(b);    //übergibt das Bundle

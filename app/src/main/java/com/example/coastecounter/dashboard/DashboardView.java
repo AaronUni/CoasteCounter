@@ -11,7 +11,6 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.coastecounter.R;
 import com.example.coastecounter.achterbahn.AchterbahnController;
 import com.example.coastecounter.park.ParkSuchenView;
-import com.example.coastecounter.park.ParkView;
 import com.example.coastecounter.suche.AchterbahnSucheView;
 
 public class DashboardView extends AppCompatActivity{
@@ -19,6 +18,7 @@ public class DashboardView extends AppCompatActivity{
     private String name = "";      //Name des ausgewählten Parkes
     private boolean ridden[] = new boolean[4];  //ob Achterbahn gefahren
     private int countSingle[] = new int[4]; //zählt die Fahrten pro Achterbahn
+    private int countParks[] = new int[3]; //zählt die Besuche pro Park
     private int count = 0;  //Count der gefahrenen Achterbahnen
     private Bundle bundle;  //bündelt die Datenfelder, um sie beim Viewwechsel mit zu übergeben
 
@@ -31,6 +31,7 @@ public class DashboardView extends AppCompatActivity{
             name = bundle.getString("Parkname");
             ridden = (boolean[]) bundle.get("ridden");
             countSingle = (int[]) bundle.get("countSingle");
+            countParks = (int[]) bundle.get("countParks");
             count = (int) bundle.get("count");
         }
         TextView park = findViewById(R.id.Parkname_Dashboard);
@@ -71,6 +72,7 @@ public class DashboardView extends AppCompatActivity{
         Bundle b = new Bundle(); //erstellt neues Bundle mit den aktuellen Datenfeldern
         b.putBooleanArray("ridden", ridden);
         b.putIntArray("countSingle", countSingle);
+        b.putIntArray("countParks", countParks);
         b.putInt("count", count);
         b.putString("Parkname", name);
         intent.putExtras(b);    //übergibt das Bundle
@@ -83,17 +85,7 @@ public class DashboardView extends AppCompatActivity{
         Bundle b = new Bundle();    //erstellt neues Bundle mit den aktuellen Datenfeldern
         b.putBooleanArray("ridden", ridden);
         b.putIntArray("countSingle", countSingle);
-        b.putInt("count", count);
-        b.putString("Parkname", name);
-        intent.putExtras(b);    //übergibt das Bundle
-        startActivity(intent);  //Viewwechsel
-    }
-
-    public void parkAnzeigen(View view) {
-        Intent intent = new Intent(this, ParkView.class);
-        Bundle b = new Bundle();
-        b.putBooleanArray("ridden", ridden);
-        b.putIntArray("countSingle", countSingle);
+        b.putIntArray("countParks", countParks);
         b.putInt("count", count);
         b.putString("Parkname", name);
         intent.putExtras(b);

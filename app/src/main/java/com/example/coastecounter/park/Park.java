@@ -1,7 +1,6 @@
 package com.example.coastecounter.park;
 
 import com.example.coastecounter.achterbahn.Achterbahn;
-import com.example.coastecounter.bewertung.Parkbewertung;
 
 import java.util.List;
 
@@ -31,7 +30,7 @@ public class Park {
 
     private List<Achterbahn> achterbahnen;
 
-    private Parkbewertung parkbewertung;
+    private int parkbewertung;
 
 
     private String theme;
@@ -40,7 +39,7 @@ public class Park {
 
     public Park(int parkID, String name, String email, String address, String telephone, String fax, int image, int maxGuests,
                 int surfaceArea, String description, String website, List<Achterbahn> achterbahnen,
-                Parkbewertung parkbewertung, String theme,
+                int parkbewertung, String theme,
                 String owner) {
         this.parkID = parkID;
         this.name = name;
@@ -160,11 +159,11 @@ public class Park {
         this.achterbahnen.add(bahn);
     }
 
-    public Parkbewertung getParkbewertung() {
+    public int getParkbewertung() {
         return parkbewertung;
     }
 
-    public void setParkbewertung(Parkbewertung parkbewertung) {
+    public void setParkbewertung(int parkbewertung) {
         this.parkbewertung = parkbewertung;
     }
 

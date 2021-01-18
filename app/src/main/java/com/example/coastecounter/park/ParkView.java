@@ -2,6 +2,7 @@ package com.example.coastecounter.park;
 
 import android.os.Bundle;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.coastecounter.R;
 import android.content.Intent;
@@ -37,8 +38,8 @@ public class ParkView extends AppCompatActivity {
         img.setImageResource(R.drawable.coastercounterlogo);
         Bundle b = getIntent().getExtras();
         if (b != null) {
-            //count = ((int[]) b.get("countSingle"))[parkDB.getByName(b.getString("id")).getParkID()];
-            //parkLaden(parkDB.getByName(b.getString("id")));       Hier muss noch irgendwie auf den richtigen Eintrag navigiert werden
+            count = ((int[]) b.get("countParks"))[parkDB.getByName(b.getString("Parkname")).getParkID()];
+            parkLaden(parkDB.getByName(b.getString("Parkname")));       //Hier muss noch irgendwie auf den richtigen Eintrag navigiert werden
         }
     }
 
@@ -61,19 +62,21 @@ public class ParkView extends AppCompatActivity {
         TextView fax = findViewById(R.id.text_parkanzeigen_fax);
         fax.setText(a.getFax());
         TextView besucherzahlen = findViewById(R.id.text_parkanzeigen_besucherzahlen);
-        besucherzahlen.setText(a.getMaxGuests());
+        besucherzahlen.setText(String.valueOf(a.getMaxGuests()));
         TextView flaeche = findViewById(R.id.text_parkanzeigen_flaeche);
-        flaeche.setText(a.getSurfaceArea());
+        flaeche.setText(String.valueOf(a.getSurfaceArea()));
         TextView website = findViewById(R.id.text_parkanzeigen_website);
         website.setText(a.getWebsite());
         TextView kurzbeschreibung = findViewById(R.id.text_parkanzeigen_kurzbeschreibung);
         kurzbeschreibung.setText(a.getDescription());
-        TextView rating = findViewById(R.id.parkanzeigen_ratingbar);
-        //
+        RatingBar rating = findViewById(R.id.parkanzeigen_ratingbar);
+        rating.setRating(a.getParkbewertung());
         TextView thema = findViewById(R.id.text_parkanzeigen_thema);
         thema.setText(a.getTheme());
         TextView betreiber = findViewById(R.id.text_parkanzeigen_betreiber);
         betreiber.setText(a.getOwner());
+        ImageView picture = findViewById(R.id.imageView_parkanzeigen);
+        picture.setImageResource(a.getImage());
         TextView counter = findViewById(R.id.textView_parkanzeigen_counter);
         counter.setText(String.valueOf(count));
     }
@@ -82,6 +85,16 @@ public class ParkView extends AppCompatActivity {
         count += 1;
         TextView counter = findViewById(R.id.textView_parkanzeigen_counter);
         counter.setText(String.valueOf(count));
+        Intent intent = new Intent(ParkView.this, DashboardView.class);
+        Bundle b = getIntent().getExtras();
+        if (b != null) {
+            int[] visits = (int[]) b.get("countParks");
+            visits[parkDB.getByName(b.getString("Parkname")).getParkID()] = count;
+            b.remove("countParks");
+            b.putIntArray("countParks", visits);
+        }
+        intent.putExtras(b);
+        startActivity(intent);
     }
 
     public void setUpToolbar() {
@@ -92,21 +105,8 @@ public class ParkView extends AppCompatActivity {
         myToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ParkView.this, DashboardView.class);
+                Intent intent = new Intent(ParkView.this, ParkSuchenView.class);
                 Bundle b = getIntent().getExtras();
-                if (b != null) {
-                    int[] rides = (int[]) b.get("countSingle");
-                    rides[parkDB.getByName(b.getString("id")).getParkID()] = count;
-                    b.remove("countSingle");
-                    b.putIntArray("countSingle", rides);
-                    if (count > 0 && !((boolean[])b.get("ridden"))
-                            [parkDB.getByName(b.getString("id")).getParkID()]) {
-                        ((boolean[])b.get("ridden"))[parkDB.getByName(b.getString("id")).getParkID()] = true;
-                        int i = (int) b.get("count") + 1;
-                        b.remove("count");
-                        b.putInt("count", i);
-                    }
-                }
                 intent.putExtras(b);
                 startActivity(intent);
             }
