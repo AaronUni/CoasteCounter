@@ -52,16 +52,6 @@ public class DashboardView extends AppCompatActivity{
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        //bei Auswahl aus dem Menü
-        switch (item.getItemId()) {
-            case R.id.id_action_perstatistik:
-                Intent intent = new Intent(DashboardView.this, AchterbahnController.class);
-                startActivity(intent);
-        }
-        return true;
-    }
 
     private void setUpToolbar() {
         //erstellt die Toolbar mit passender Überschrift
