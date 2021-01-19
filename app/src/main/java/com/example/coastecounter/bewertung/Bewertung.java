@@ -10,9 +10,7 @@ public interface Bewertung {
 
     abstract double getAvg();
 
-    /**
-     *
-     */
+
     abstract void setStars(int stars);
 
     abstract void getStars();

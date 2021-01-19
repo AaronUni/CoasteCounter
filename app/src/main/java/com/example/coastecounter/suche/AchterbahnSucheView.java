@@ -14,6 +14,7 @@ import com.example.coastecounter.R;
 import com.example.coastecounter.achterbahn.AchterbahnDB;
 import com.example.coastecounter.achterbahn.AchterbahnView;
 import com.example.coastecounter.dashboard.DashboardView;
+import com.example.coastecounter.park.ParkSuchenView;
 
 import java.util.ArrayList;
 
@@ -65,21 +66,7 @@ public class AchterbahnSucheView extends AppCompatActivity {
         final ListView listView = findViewById(R.id.listview_achterbahnsuche); //erzeugt ListView
         listView.setAdapter(adapter);   //übergibt den ArrayAdapter der ListView
         searchView = findViewById(R.id.searchview_achterbahnsuchen);    //setzt Suchleiste
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() { //Aktion bei EIngabe in der Suchleiste
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                //bei Bestätigung ändert sich die ListView-Anzeige entsprechend und der Fokus ist nicht mehr in der Suchleiste
-                searchView.clearFocus();
-                if (myList.contains(query)) adapter.getFilter().filter(query);
-                return false;
-            }
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                //bei Eingabe in der Suchleiste ändert sich die ListView-Anzeige entsprechend
-                adapter.getFilter().filter(newText);
-                return false;
-            }
-        });
+        ParkSuchenView.listenerErstellen(searchView, myList, adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {  //Aktion bei Auswahl einer Achterbahn

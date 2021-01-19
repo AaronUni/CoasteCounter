@@ -26,9 +26,7 @@ public class Benutzer {
 
     private BenutzerController benutzerController;
 
-    /**
-     *
-     */
+
     public int getUserID() {
         return 0;
     }
@@ -37,16 +35,12 @@ public class Benutzer {
         return null;
     }
 
-    /**
-     *
-     */
+
     public void setUsername(String username) {
 
     }
 
-    /**
-     *
-     */
+
     public void setPassword(String password) {
 
     }
@@ -55,9 +49,7 @@ public class Benutzer {
         return null;
     }
 
-    /**
-     *
-     */
+
     public void setEmail(String email) {
 
     }
@@ -66,9 +58,7 @@ public class Benutzer {
         return null;
     }
 
-    /**
-     *
-     */
+
     public void setName(String name) {
 
     }
@@ -77,9 +67,7 @@ public class Benutzer {
         return null;
     }
 
-    /**
-     *
-     */
+
     public void setSurname(String surname) {
 
     }
@@ -88,9 +76,7 @@ public class Benutzer {
         return null;
     }
 
-    /**
-     *
-     */
+
     public void setCity(String city) {
 
     }
@@ -99,9 +85,7 @@ public class Benutzer {
         return 0;
     }
 
-    /**
-     *
-     */
+
     public void setZip(int zip) {
 
     }
@@ -110,9 +94,7 @@ public class Benutzer {
         return false;
     }
 
-    /**
-     *
-     */
+
     public void setLoggedIn(boolean loggedIn) {
 
     }

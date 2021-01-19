@@ -66,9 +66,7 @@ public class Besucher extends Benutzer {
         return 0;
     }
 
-    /**
-     *
-     */
+
     public boolean addRide(Achterbahn coaster) {
         return false;
     }
@@ -92,9 +90,7 @@ public class Besucher extends Benutzer {
         return false;
     }
 
-    /**
-     *
-     */
+
     public boolean deleteUserAccount(Benutzer user) {
         return false;
     }

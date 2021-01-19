@@ -17,14 +17,17 @@ public class ParkDB {
     Park hansaPark = new Park(1, "Hansa Park", "info@hansapark.de",
             "Am Fahrenkrog 1, \n23730 Sierksdorf", "04563-4740", "04563-474100",
             R.drawable.hansaparklogo, 1400000, 46,
-            "Deutschlands einziger Erlebnispark am Meer liegt in der Lübecker Bucht", "www.hansapark.de",new ArrayList<Achterbahn>()
-            , 4, "Hanse", "Christoph Andreas Leicht");
+            "Deutschlands einziger Erlebnispark am Meer liegt in der Lübecker Bucht",
+            "www.hansapark.de", new ArrayList<Achterbahn>(),4, "Hanse",
+            "Christoph Andreas Leicht");
     Park europaPark = new Park(2, "Europa Park", "info@europapark.de",
             "Europa-Park-Straße 2, \n77977 Rust", "07822 77-6688",
             "07822 77-11605", R.drawable.europaparklogo, 5800000, 95,
             "Europpark liegt in Rust(Baden-Württemberg) und ist mit rund 5,8 Millionen Besuchern(2019)"
                     + "der meistbesuchte Freizeitpark im deutschsprachigen Raum. Der Europa-Park öffnte 12 Juli 1975"
-            + " zunächst als Ausstellungsfläche des hauseignen Fahrgeschäftehersteller.", "www.europapark.de", new ArrayList<Achterbahn>(), 5, "Europa", "Familie Mack");
+            + " zunächst als Ausstellungsfläche des hauseignen Fahrgeschäftehersteller.",
+            "www.europapark.de", new ArrayList<Achterbahn>(), 5,
+            "Europa", "Familie Mack");
 
 
     private List<Park> parkList = new ArrayList<Park>();

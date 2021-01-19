@@ -62,6 +62,20 @@ public class ParkSuchenView extends AppCompatActivity {
         ListView listView = findViewById(R.id.listview_parksuchen); //erzeugt ListView
         listView.setAdapter(adapter);   //übergibt den ArrayAdapter der ListView
         searchView = findViewById(R.id.searchview_parkSuchen);  //setzt Suchleiste
+        listenerErstellen(searchView, myList, adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {  //Aktion bei Auswahl eines Parks
+                Intent intent = new Intent(ParkSuchenView.this, ParkView.class); //setzt nächste View
+                Bundle b = getIntent().getExtras(); //lädt übergebenes Bundle
+                b.putString("Parkname", (String) parent.getItemAtPosition(position)); //fügt dem Bundle die Info Parkname hinzu
+                intent.putExtras(b);    //übergibt das Bundle
+                startActivity(intent);  //Viewwechsel
+            }
+        });
+    }
+
+    public static void listenerErstellen(final SearchView searchView, final ArrayList<String> myList, final ArrayAdapter adapter) {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {  //Aktion bei EIngabe in der Suchleiste
             @Override
             public boolean onQueryTextSubmit(String query) {
@@ -75,16 +89,6 @@ public class ParkSuchenView extends AppCompatActivity {
                 //bei Eingabe in der Suchleiste ändert sich die ListView-Anzeige entsprechend
                 adapter.getFilter().filter(newText);
                 return false;
-            }
-        });
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {  //Aktion bei Auswahl eines Parks
-                Intent intent = new Intent(ParkSuchenView.this, ParkView.class); //setzt nächste View
-                Bundle b = getIntent().getExtras(); //lädt übergebenes Bundle
-                b.putString("Parkname", (String) parent.getItemAtPosition(position)); //fügt dem Bundle die Info Parkname hinzu
-                intent.putExtras(b);    //übergibt das Bundle
-                startActivity(intent);  //Viewwechsel
             }
         });
     }

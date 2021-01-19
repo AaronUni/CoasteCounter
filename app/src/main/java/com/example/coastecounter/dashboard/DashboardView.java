@@ -3,24 +3,21 @@ package com.example.coastecounter.dashboard;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import com.example.coastecounter.R;
-import com.example.coastecounter.achterbahn.AchterbahnController;
 import com.example.coastecounter.park.ParkSuchenView;
 import com.example.coastecounter.suche.AchterbahnSucheView;
 
-public class DashboardView extends AppCompatActivity{
+public class DashboardView extends AppCompatActivity {
 
     private String name = "";      //Name des ausgewählten Parkes
-    private boolean ridden[] = new boolean[4];  //ob Achterbahn gefahren
-    private int countSingle[] = new int[4]; //zählt die Fahrten pro Achterbahn
-    private int countParks[] = new int[3]; //zählt die Besuche pro Park
+    private boolean[] ridden = new boolean[4];  //ob Achterbahn gefahren
+    private int[] countSingle = new int[4]; //zählt die Fahrten pro Achterbahn
+    private int[] countParks = new int[3]; //zählt die Besuche pro Park
     private int count = 0;  //Count der gefahrenen Achterbahnen
     private Bundle bundle;  //bündelt die Datenfelder, um sie beim Viewwechsel mit zu übergeben
 
@@ -63,20 +60,18 @@ public class DashboardView extends AppCompatActivity{
     public void starteSuche(View view) {
         //wird in der dashboard.xml aufgerufen, bei OnClick auf button_dashboard_achterbahn
         Intent intent = new Intent(this, AchterbahnSucheView.class); //setzt nächste View
-        Bundle b = new Bundle(); //erstellt neues Bundle mit den aktuellen Datenfeldern
-        b.putBooleanArray("ridden", ridden);
-        b.putIntArray("countSingle", countSingle);
-        b.putIntArray("countParks", countParks);
-        b.putInt("count", count);
-        b.putString("Parkname", name);
-        intent.putExtras(b);    //übergibt das Bundle
-        startActivity(intent);  //wechselt View
+        pararmeterUebergabe(intent);
     }
 
     public void parkSearch(View view) {
         //wird in der dashboard.xml aufgerufen, bei OnClick auf button_dashboard_parkauswahl
         Intent intent = new Intent(this, ParkSuchenView.class); //setzt nächsten View
-        Bundle b = new Bundle();    //erstellt neues Bundle mit den aktuellen Datenfeldern
+        pararmeterUebergabe(intent);
+    }
+
+    private void pararmeterUebergabe(Intent intent) {
+        //erstellt neues Bundle mit den aktuellen Datenfeldern
+        Bundle b = new Bundle();
         b.putBooleanArray("ridden", ridden);
         b.putIntArray("countSingle", countSingle);
         b.putIntArray("countParks", countParks);
