@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import com.example.coastecounter.R;
+import com.example.coastecounter.park.ParkDB;
 import com.example.coastecounter.park.ParkSuchenView;
 import com.example.coastecounter.suche.AchterbahnSucheView;
 
@@ -20,6 +21,7 @@ public class DashboardView extends AppCompatActivity {
     private int[] countParks = new int[3]; //zählt die Besuche pro Park
     private int count = 0;  //Count der gefahrenen Achterbahnen
     private Bundle bundle;  //bündelt die Datenfelder, um sie beim Viewwechsel mit zu übergeben
+    ParkDB parkDB = new ParkDB();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,14 +34,20 @@ public class DashboardView extends AppCompatActivity {
             countSingle = (int[]) bundle.get("countSingle");
             countParks = (int[]) bundle.get("countParks");
             count = (int) bundle.get("count");
-            ImageView imageView = findViewById(R.id.image_dashboard_logo);
-            imageView.setVisibility(4);
+            logoSetzen();
         }
         TextView park = findViewById(R.id.Parkname_Dashboard);
         park.setText(name); //setzt ausgewählten Parknamen
         park.setTextSize(32);
         TextView counted = findViewById(R.id.textView_dashboard_totalCounterAnzeige);
         counted.setText(String.valueOf(count)); //setzt den Count
+    }
+
+    private void logoSetzen() {
+
+        ImageView imageView = findViewById(R.id.image_dashboard_logo);
+        imageView.setImageResource(parkDB.getByName(bundle.getString("Parkname")).getImage());
+        imageView.setPadding(200, 5, 200, 5);
     }
 
     @Override

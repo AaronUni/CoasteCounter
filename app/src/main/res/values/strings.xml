@@ -52,5 +52,6 @@
     <string name="string_parkanzeigen_betreiber">Betreiber:</string>
     <string name="string_parkanzeigen_bisher_besucht">Bisher besucht</string>
     <string name="string_parkanzeigen_parklogo">Parklogo</string>
+    <string name="string_parkanzeigen">Check in</string>
 
 </resources>
