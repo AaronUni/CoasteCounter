@@ -34,7 +34,7 @@ public class DashboardView extends AppCompatActivity {
             countSingle = (int[]) bundle.get("countSingle");
             countParks = (int[]) bundle.get("countParks");
             count = (int) bundle.get("count");
-            logoSetzen();
+            if(!name.isEmpty()) logoSetzen();
         }
         TextView park = findViewById(R.id.Parkname_Dashboard);
         park.setText(name); //setzt ausgewählten Parknamen
